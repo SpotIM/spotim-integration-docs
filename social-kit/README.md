@@ -68,6 +68,8 @@ In addition to a Spot ID and Post ID, you will also need an `ARTICLE_URL`. The A
 
 Spot.IM provides a plugin for integrating with WordPress.
 
+[![How to Install the Spot.IM WordPress Plugin](https://img.youtube.com/vi/U-TWO8k0ojI/0.jpg)](https://www.youtube.com/watch?v=U-TWO8k0ojI)_Click here to watch a video walkthrough._
+
 1. Log into your WordPress dashboard as an administrator.
 2. In the left-hand navigation pane, click **Plugins** > **Add New**.
 3. Enter "Spot.IM Comments" in the search field. You should see the [Spot.IM Comments](https://wordpress.org/plugins/spotim-comments/) plugin listed. If you do not see the plugin listed, you may be using an outdated or incompatible version of WordPress.
