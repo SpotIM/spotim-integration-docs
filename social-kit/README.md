@@ -9,7 +9,7 @@ If you are using WordPress, please see the [WordPress documentation page](wordpr
   - [Before You Begin](#before-you-begin)
     - [Best Practices for Creating Post IDs](#best-practices-for-creating-post-ids)
   - [Standard Implementation](#standard-implementation)
-  - [Other Options](#advanced-options)
+  - [Other Options](#other-options)
     - [Standalone Conversation Widget](#standalone-conversation-widget)
     - [Standalone Popular in the Community Widget](#standalone-popular-in-the-community-widget)
     - [Multiple Conversation Instances](#multiple-conversation-instances)
@@ -23,6 +23,21 @@ If you are using WordPress, please see the [WordPress documentation page](wordpr
 Before using the Spot.IM Social Kit, you will need your Spot.IM `Spot ID`. You will also need to create a `Post ID` for each article or page that you want to display the Social Kit on. You can use any alphanumeric value as a Post ID, but it must be unique to each page. See the following section for [best practices for creating Post IDs](#best-practices-for-creating-post-ids). You will also need an `ARTICLE_URL`, which is the canonical URL of the page that the article is hosted on. The `ARTICLE_URL` is used in part to generate previews of the article when it is linked to in the Social Kit.
 
 Additionally, your article pages will need to contain [Open Graph (OG)](http://ogp.me/) tags. OG tags are meta tags that define the title, type, preview image, and other attributes of each article on your website. Each page must contain these tags in order for the Social Kit to generate previews of the article. You can learn more about OG tags at the [OG specification page](http://ogp.me/).
+
+### Best Practices for Creating Post IDs
+
+A Post ID can be any alphanumeric value that uniquely identifies a page. Post IDs can contain the following characters:
+
+- Letters
+- Numbers
+- Underscores
+- Dashes
+
+Post IDs should be short. A common approach is to use the page's title or content. For example:
+
+- `article_1`
+- `article-title`
+- `article-short-link`
 
 ## Standard Implementation
 
