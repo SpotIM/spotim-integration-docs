@@ -1,7 +1,5 @@
 # Spot.IM on AMP (Accelerated Mobile Pages)
 
-<!-- https://spotim-jira.atlassian.net/wiki/spaces/SP/pages/160137260/AMP -->
-
 Spot.IM supports Accelerated Mobile Page (AMP). If you're not familiar with AMP, it's an open source HTML library, JavaScript library, and caching service designed for building high performance web pages. AMP pages are highly optimized and adhere to a set of standards to maximize performance across a variety of browsers and platforms. To learn more, see Google's [What is AMP](https://www.ampproject.org/learn/overview/) page.
 
 ## Contents

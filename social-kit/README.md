@@ -1,6 +1,6 @@
 # Spot.IM Social Kit
 
-The Spot.IM Social Kit consists of two components: Conversations and Popular in the Community. These components allow your users to create comments and view popular community-generated content. You can also use the Social Kit to import comments from a variety of social platforms including Facebook, WordPress, and Disqus.
+The Spot.IM Social Kit consists of two components: Conversation and Popular in the Community. These components allow your users to write comments and view popular community-generated content.
 
 If you are using WordPress, please see the [WordPress documentation page](wordpress/README.md).
 
@@ -20,9 +20,9 @@ If you are using WordPress, please see the [WordPress documentation page](wordpr
 
 ## Before You Begin
 
-Before using the Spot.IM Social Kit, you will need your Spot.IM `Spot ID`. You will also need to create a `Post ID` for each article or page that you want to display the Social Kit on. You can use any alphanumeric value as a Post ID, but it must be unique to each page. See the following section for [best practices for creating Post IDs](#best-practices-for-creating-post-ids). You will also need an `ARTICLE_URL`, which is the canonical URL of the page that the article is hosted on. The `ARTICLE_URL` is used in part to generate previews of the article when it is linked to in the Social Kit.
+Before using the Spot.IM Social Kit, you will need your Spot.IM `Spot ID`. You will also need to create a `Post ID` for each article or page that you want to display the Social Kit on. You can use any alphanumeric value as a `Post ID`, but it must be unique to each page. See the following section for [best practices for creating Post IDs](#best-practices-for-creating-post-ids).
 
-Additionally, your article pages will need to contain [Open Graph (OG)](http://ogp.me/) tags. OG tags are meta tags that define the title, type, preview image, and other attributes of each article on your website. Each page must contain these tags in order for the Social Kit to generate previews of the article. You can learn more about OG tags at the [OG specification page](http://ogp.me/).
+Additionally, your article pages will need to contain [OG Tags](https://blog.kissmetrics.com/open-graph-meta-tags/) tags. OG tags are meta tags that define the title, type, preview image, and other attributes of each article on your website. Each page must contain these tags in order for the Popular in the Community to generate previews of the article.
 
 ### Best Practices for Creating Post IDs
 
@@ -43,18 +43,18 @@ Post IDs should be short. A common approach is to use the page's title or conten
 
 The Social Kit standard implementation adds two widgets to each page: the Conversation widget and the Popular in the Community widget. The Conversation widget lets your users view and create comments, while the Popular in the Community widget showcases popular user-generated content.
 
-![Image of a standard implementation](standard-implementation.png)
+![Image of a standard implementation](social-kit.png)
 
-To add these widgets to your page, first add the following `<script>` to the page's `<head>` element:
+To add these widgets to your page, place the following elements in the location on the page where you want the widgets to appear. You can place these widgets anywhere, although we recommend placing them just below the page's main content.
 
-```html
-<script async src="https://recirculation.spot.im/spot/SPOT_ID"></script>
-```
-
-Then, place the following elements in the location on the page where you want the widgets to appear. You can place these widgets anywhere, although we recommend placing them just below the page's main content.
+You will need to replace the following placeholders:
+- `SPOT_ID` - Your Spot ID. **Notice** that the `SPOT_ID` appears in 3 places.
+- `POST_ID` in `data-post-id` attribute - A unique identifier for this Conversation.
+- `ARTICLE_URL` in `data-article-id` attribute - The full Canonical URL of the page.
 
 ```html
 <div data-spotim-module="recirculation" data-spot-id="SPOT_ID"></div>
+<script async src="https://recirculation.spot.im/spot/SPOT_ID"></script>
 <script async src="https://launcher.spot.im/spot/SPOT_ID"
     data-spotim-module="spotim-launcher"
     data-post-url="ARTICLE_URL"
@@ -99,10 +99,10 @@ The import process is triggered by an _import hint_, which is a set of parameter
 
 ### Disqus
 
-Importing comments from Disqus requires two additional parameters:
+Importing comments from Disqus requires two additional attributes:
 
-- A [`DISQUS_URL`](https://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables#thispageurl), which is the URL that the Disqus service uses to identify the article.
-- A [`DISQUS_IDENTIFIER`](https://help.disqus.com/customer/portal/articles/472099-what-is-a-disqus-identifier-), which tells the Disqus service which comment thread to load.
+- `data-disqus-url` - [`disqus_url` or `this.page.url`](https://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables#thispageurl) parameter in your Disqus integration code.
+- `data-disqus-identifier` - [`disqus_identifier`](https://help.disqus.com/customer/portal/articles/472099-what-is-a-disqus-identifier-) parameter in your Disqus integration code.
 
 Add these parameters to the Conversation's `<script>` block on the article page.
 
@@ -117,9 +117,9 @@ Add these parameters to the Conversation's `<script>` block on the article page.
 
 ### Facebook
 
-Importing comments from Facebook requires one additional parameter:
+Importing comments from Facebook requires one additional attribute:
 
-- A `FACEBOOK_URL`, which is the URL of the Facebook page that you want to display comments for.
+- `data-facebook-url` - this is the canonical URL of the page you place the Conversation on.
 
 Add this parameter to the Conversation's `<script>` block on the article page.
 
@@ -128,5 +128,5 @@ Add this parameter to the Conversation's `<script>` block on the article page.
     data-spotim-module="spotim-launcher"
     data-post-id="POST_ID"
     data-post-url="ARTICLE_URL"
-    data-facebook-url="FACEBOOK_URL"></script>
+    data-facebook-url="ARTICLE_URL"></script>
 ```

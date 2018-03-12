@@ -2,8 +2,6 @@
 
 You can display the number of messages in a Conversation anywhere on the page.
 
-![Message count control](images/message-count.png)
-
 Place the following script on your page, replacing `SPOT_ID` with your Spot ID:
 
 ```html

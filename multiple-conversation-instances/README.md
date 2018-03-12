@@ -1,8 +1,8 @@
 # [Multiple Conversation Instances](multiple-instances-example.html)
 
-You can embed multiple Conversations on the same page. Some features such as infinite scroll pages or Single Page Applications (SPAs) require this functionality. This approach creates a `<div>` container where the Conversation's data loads.
+You can embed multiple Conversations on the same page. Some features such as infinite scroll pages or Single Page Applications (SPAs) require this functionality. This approach creates a `<div>` container where the Conversation's content loads.
 
-**Important:** The `POST_ID` and `ARTICLE_URL` parameters must match the article that the Conversation relates to. If the URL changes while a user is using an infinite scroll Conversation or swapping articles in an SPA, ensure that the Conversation's `ARTICLE_URL` matches the new URL. Using an identical `ARTICLE_URL` in two different Conversations could lead to a corrupted state. Each Conversation should also refer to a different `POST_ID`, otherwise the same Conversation will be loaded multiple times.
+**Important:** The `POST_ID` and `ARTICLE_URL` parameters must match the article that the Conversation relates to. If the URL changes while a user is using an infinite scroll Conversation or swapping articles in an SPA, ensure that the Conversation's `ARTICLE_URL` matches the new URL. Using an identical `ARTICLE_URL` in two different Conversations could lead to a corruption in the system. Each Conversation should also refer to a different `POST_ID`, otherwise the same Conversation will be loaded multiple times.
 
 ## Adding an Instance
 
