@@ -1,4 +1,4 @@
-# [Multiple Conversation Instances](multiple-instances-example.html)
+# Multiple Conversation Instances
 
 You can embed multiple Conversations on the same page. Some features such as infinite scroll pages or Single Page Applications (SPAs) require this functionality. This approach creates a `<div>` container where the Conversation's content loads.
 

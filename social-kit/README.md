@@ -2,7 +2,7 @@
 
 The Spot.IM Social Kit consists of two components: Conversation and Popular in the Community. These components allow your users to write comments and view popular community-generated content.
 
-If you are using WordPress, please see the [WordPress documentation page](wordpress/README.md).
+If you are using WordPress, please see the [WordPress documentation page](../wordpress/README.md).
 
 ## Contents
 
@@ -63,9 +63,9 @@ You will need to replace the following placeholders:
 
 ## Other Options
 
-### [Standalone Conversation Widget](conversation-standalone-example.html)
+### Standalone Conversation Widget
 
-To display a Conversation widget by itself, place the Conversation's `<script>` element in the location on the page where you want the widget to appear. You can find an implementation example [here](conversation-standalone-example.html).
+To display a Conversation widget by itself, place the Conversation's `<script>` element in the location on the page where you want the widget to appear. You can find an implementation example [here](conversation-example.html).
 
 ```html
 <script async src="https://launcher.spot.im/spot/SPOT_ID"
@@ -74,22 +74,22 @@ To display a Conversation widget by itself, place the Conversation's `<script>` 
     data-post-id="POST_ID"></script>
 ```
 
-### [Standalone Popular in the Community Widget](popular-in-the-community-standalone-example.html)
+### Standalone Popular in the Community Widget
 
-To display a Popular in the Community widget by itself, place the following elements in the location on the page where you want the widget to appear. You can find an implementation example [here](popular-in-the-community-standalone-example.html).
+To display a Popular in the Community widget by itself, place the following elements in the location on the page where you want the widget to appear. You can find an implementation example [here](popular-in-the-community-example.html).
 
 ```html
 <div data-spotim-module="recirculation" data-spot-id="SPOT_ID"></div>
 <script src="https://recirculation.spot.im/spot/SPOT_ID"></script>
 ```
 
-### [Multiple Conversation Instances](multiple-conversation-instances/README.md)
+### Multiple Conversation Instances
 
-You can embed multiple Conversation widgets on a single page. For more information, see the [Multiple Conversation Instances](multiple-conversation-instances/README.md) documentation page.
+You can embed multiple Conversation widgets on a single page. For more information, see the [Multiple Conversation Instances](../multiple-conversation-instances/README.md) documentation page.
 
-### [Displaying the Number of Messages in a Conversation](comments-count/README.md)
+### Displaying the Number of Messages in a Conversation
 
-You can display a separate widget showing the number of messages in a Conversation. For more information, see the [Message Count](comments-count/README.md) documentation page.
+You can display a separate widget showing the number of messages in a Conversation. For more information, see the [Message Count](../comments-count/README.md) documentation page.
 
 ## Integrations
 

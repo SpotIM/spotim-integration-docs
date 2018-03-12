@@ -1,4 +1,4 @@
-# [Displaying the Number of Messages in a Conversation](comments-count-example.html)
+# Displaying the Number of Messages in a Conversation
 
 You can display the number of messages in a Conversation anywhere on the page.
 
