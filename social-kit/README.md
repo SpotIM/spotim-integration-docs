@@ -1,47 +1,132 @@
 # Spot.IM Social Kit
 
-Outdated guide:
-https://support.spot.im/implementation/universal-code
+The Spot.IM Social Kit consists of two components: Conversation and Popular in the Community. These components allow your users to write comments and view popular community-generated content.
 
-Admin UI:
-https://admin.spot.im/spot/sp_3EHI9dRR/features/conversation
+If you are using WordPress, please see the [WordPress documentation page](wordpress/README.md).
 
-Social Kit embed code (Conversation + Popular in the Community):
-https://spotim-jira.atlassian.net/wiki/spaces/SP/pages/211828/Conversation+implementation
+## Contents
 
-WordPress Plugin
-https://spotim-jira.atlassian.net/wiki/spaces/SP/pages/302271/WordPress+Plugin+guide
+  - [Before You Begin](#before-you-begin)
+    - [Best Practices for Creating Post IDs](#best-practices-for-creating-post-ids)
+  - [Standard Implementation](#standard-implementation)
+  - [Other Options](#other-options)
+    - [Standalone Conversation Widget](#standalone-conversation-widget)
+    - [Standalone Popular in the Community Widget](#standalone-popular-in-the-community-widget)
+    - [Multiple Conversation Instances](#multiple-conversation-instances)
+    - [Displaying the Number of Messages in a Conversation](#displaying-the-number-of-messages-in-a-conversation)
+  - [Integrations](#integrations)
+    - [Disqus](#disqus)
+    - [Facebook](#facebook)
 
-*Important info about parameters:*
-* Spot ID - get it from your account manager
-* Post ID - should be a unique string for every article. Can be a numeric ID (such as 462936) or a chars string (such as article-title-1).
+## Before You Begin
 
-## Advanced:
+Before using the Spot.IM Social Kit, you will need your Spot.IM `Spot ID`. You will also need to create a `Post ID` for each article or page that you want to display the Social Kit on. You can use any alphanumeric value as a `Post ID`, but it must be unique to each page. See the following section for [best practices for creating Post IDs](#best-practices-for-creating-post-ids).
 
-### Comments Import
+Additionally, your article pages will need to contain [OG Tags](https://blog.kissmetrics.com/open-graph-meta-tags/) tags. OG tags are meta tags that define the title, type, preview image, and other attributes of each article on your website. Each page must contain these tags in order for the Popular in the Community to generate previews of the article.
 
-#### Disqus Import
-https://spotim-jira.atlassian.net/wiki/spaces/SP/pages/302145/Conversation+with+Disqus+import
-(Needs a good reference on how to get the Disqus parameters)
+### Best Practices for Creating Post IDs
 
-#### Facebook Comments Import
-https://spotim-jira.atlassian.net/wiki/spaces/SP/pages/302205/Conversation+with+Facebook+Comments+import
+A Post ID can be any alphanumeric value that uniquely identifies a page. Post IDs can contain the following characters:
 
-#### WordPress Comments Import
-Wordpress Comments Import is supported through our WordPress Plugin (link to WP plugin instructions).
+- Letters
+- Numbers
+- Underscores
+- Dashes
 
-### Popular in the community standalone:
-https://spotim-jira.atlassian.net/wiki/spaces/SP/pages/440606/Popular+in+the+Community+standalone
+Post IDs should be short. A common approach is to use the page's title or content. For example:
 
-### Conversation standalone:
-https://spotim-jira.atlassian.net/wiki/spaces/SP/pages/159023105/Conversation+implementation+-+standalone
+- `article_1`
+- `article-title`
+- `article-short-link`
 
-### Newsfeed standalone:
-https://spotim-jira.atlassian.net/wiki/spaces/SP/pages/2850817/Newsfeed+standalone
+## Standard Implementation
 
+The Social Kit standard implementation adds two widgets to each page: the Conversation widget and the Popular in the Community widget. The Conversation widget lets your users view and create comments, while the Popular in the Community widget showcases popular user-generated content.
 
-### Infinite scroll / SPA (multiple instances of Social Kit):
-https://spotim-jira.atlassian.net/wiki/spaces/SP/pages/125304833/Multiple+instances+of+Conversation
+![Image of a standard implementation](social-kit.png)
 
-### Comments count:
-https://spotim-jira.atlassian.net/wiki/spaces/SP/pages/103519/Messages+Count
+To add these widgets to your page, place the following elements in the location on the page where you want the widgets to appear. You can place these widgets anywhere, although we recommend placing them just below the page's main content.
+
+You will need to replace the following placeholders:
+- `SPOT_ID` - Your Spot ID. **Notice** that the `SPOT_ID` appears in 3 places.
+- `POST_ID` in `data-post-id` attribute - A unique identifier for this Conversation.
+- `ARTICLE_URL` in `data-article-id` attribute - The full Canonical URL of the page.
+
+```html
+<div data-spotim-module="recirculation" data-spot-id="SPOT_ID"></div>
+<script async src="https://recirculation.spot.im/spot/SPOT_ID"></script>
+<script async src="https://launcher.spot.im/spot/SPOT_ID"
+    data-spotim-module="spotim-launcher"
+    data-post-url="ARTICLE_URL"
+    data-post-id="POST_ID"></script>
+```
+
+## Other Options
+
+### [Standalone Conversation Widget](conversation-standalone-example.html)
+
+To display a Conversation widget by itself, place the Conversation's `<script>` element in the location on the page where you want the widget to appear. You can find an implementation example [here](conversation-standalone-example.html).
+
+```html
+<script async src="https://launcher.spot.im/spot/SPOT_ID"
+    data-spotim-module="spotim-launcher"
+    data-post-url="ARTICLE_URL"
+    data-post-id="POST_ID"></script>
+```
+
+### [Standalone Popular in the Community Widget](popular-in-the-community-standalone-example.html)
+
+To display a Popular in the Community widget by itself, place the following elements in the location on the page where you want the widget to appear. You can find an implementation example [here](popular-in-the-community-standalone-example.html).
+
+```html
+<div data-spotim-module="recirculation" data-spot-id="SPOT_ID"></div>
+<script src="https://recirculation.spot.im/spot/SPOT_ID"></script>
+```
+
+### [Multiple Conversation Instances](multiple-conversation-instances/README.md)
+
+You can embed multiple Conversation widgets on a single page. For more information, see the [Multiple Conversation Instances](multiple-conversation-instances/README.md) documentation page.
+
+### [Displaying the Number of Messages in a Conversation](comments-count/README.md)
+
+You can display a separate widget showing the number of messages in a Conversation. For more information, see the [Message Count](comments-count/README.md) documentation page.
+
+## Integrations
+
+You can import comments from another comment platform into Spot.IM. If you are migrating from another platform, this lets your users continue their conversations in Spot.IM from the other platform.
+
+The import process is triggered by an _import hint_, which is a set of parameters added to a Conversation's `<script>` block. These parameters identify the article in the platform you are importing from. When the Conversation loads for the first time, the import hint triggers the Spot.IM backend service to import the article's comments from the previous platform. This process occurs only once for each article when the article's Conversation widget is first loaded.
+
+### Disqus
+
+Importing comments from Disqus requires two additional attributes:
+
+- `data-disqus-url` - [`disqus_url` or `this.page.url`](https://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables#thispageurl) parameter in your Disqus integration code.
+- `data-disqus-identifier` - [`disqus_identifier`](https://help.disqus.com/customer/portal/articles/472099-what-is-a-disqus-identifier-) parameter in your Disqus integration code.
+
+Add these parameters to the Conversation's `<script>` block on the article page.
+
+```html
+<script async src="https://launcher.spot.im/spot/SPOT_ID"
+    data-spotim-module="spotim-launcher"
+    data-post-id="POST_ID"
+    data-post-url="ARTICLE_URL"
+    data-disqus-url="DISQUS_URL"
+    data-disqus-identifier="DISQUS_IDENTIFIER"></script>
+```
+
+### Facebook
+
+Importing comments from Facebook requires one additional attribute:
+
+- `data-facebook-url` - this is the canonical URL of the page you place the Conversation on.
+
+Add this parameter to the Conversation's `<script>` block on the article page.
+
+```html
+<script async src="https://launcher.spot.im/spot/SPOT_ID"
+    data-spotim-module="spotim-launcher"
+    data-post-id="POST_ID"
+    data-post-url="ARTICLE_URL"
+    data-facebook-url="ARTICLE_URL"></script>
+```

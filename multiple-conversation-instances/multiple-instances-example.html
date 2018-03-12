@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Multiple Conversations Demo Page</title>
+    <meta name="description" content="Multiple Conversations demo page" />
+    <meta name="author" content="Spot.IM" />
+    <script>
+      var spotId = 'sp_1FBWGN6e'; // Replace with your Spot ID.
+      var postId = 'amp-demo-1';  // Replace with your unique Post ID.
+      var articleUrl = 'ARTICLE_URL';
+      // get reference to the container:
+      var container = document.querySelector('.spotim-container');
+      // create the elements and set all attributes:
+      var recirculationDiv = document.createElement('div');
+      recirculationDiv.setAttribute('data-spotim-module', 'recirculation');
+      recirculationDiv.setAttribute('data-spot-id', spotId);
+      var recirculationScript = document.createElement('script');
+      recirculationScript.setAttribute('async', 'true');
+      recirculationScript.setAttribute('src', 'https://recirculation.spot.im/spot/' + spotId);
+      var conversationScript = document.createElement('script');
+      conversationScript.setAttribute('async', 'true');
+      conversationScript.setAttribute('src', 'https://launcher.spot.im/spot/' + spotId);
+      conversationScript.setAttribute('data-spotim-module', 'spotim-launcher');
+      conversationScript.setAttribute('data-post-url', articleUrl);
+      conversationScript.setAttribute('data-post-id', postId);
+      // append the elements to the container:
+      container.appendChild(recirculationDiv);
+      container.appendChild(recirculationScript);
+      container.appendChild(conversationScript);
+    </script>
+  </head>
+  <body>
+    <div class="spotim-container"></div>
+  </body>
+</html>
