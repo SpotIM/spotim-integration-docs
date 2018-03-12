@@ -130,3 +130,11 @@ Add this parameter to the Conversation's `<script>` block on the article page.
     data-post-url="ARTICLE_URL"
     data-facebook-url="ARTICLE_URL"></script>
 ```
+
+### Livefyre
+
+Importing Livefyre comments requires one additional attributes:
+
+- `data-livefyre-url` - this is the `articleId`, which uniquely identifies a Collection in your Livefyre account
+
+See [Livefyre Import](../livefyre-import/README.md) documentation for more details about the import process.
