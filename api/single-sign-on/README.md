@@ -136,7 +136,7 @@ The publisher is notified with an event when the user attempts to send his messa
 
 **Example**
 ```javascript
-document.addEventListener('spot-im-current-user-sent-message', function(event) {
+document.addEventListener('spot-im-login-start', function(event) {
     // trigger your login flow here
 });
 ```
