@@ -50,7 +50,8 @@ To add these widgets to your page, place the following elements in the location 
 You will need to replace the following placeholders:
 - `SPOT_ID` - Your Spot ID. **Notice** that the `SPOT_ID` appears in 3 places.
 - `POST_ID` in `data-post-id` attribute - A unique identifier for this Conversation.
-- `ARTICLE_URL` in `data-article-id` attribute - The full Canonical URL of the page.
+- `ARTICLE_TOPIC` in `data-article-tags` attribute - Main topics of the article. Can include several topics, separated by ",".This attribute is optional, and is used to support SpotIM's advanced features, such as Topic Pages, Recirculation by Topic, etc.
+- `ARTICLE_URL` in `data-post-url` attribute - The full Canonical URL of the page. This attribute is optional, and is used only if page's Canonical URL reference in the page's head section is erroneous.
 
 ```html
 <div data-spotim-module="recirculation" data-spot-id="SPOT_ID"></div>
@@ -58,6 +59,7 @@ You will need to replace the following placeholders:
 <script async src="https://launcher.spot.im/spot/SPOT_ID"
     data-spotim-module="spotim-launcher"
     data-post-url="ARTICLE_URL"
+    data-article-tags="ARTICLE_TOPIC1, ARTICLE_TOPIC2"    
     data-post-id="POST_ID"></script>
 ```
 
@@ -71,6 +73,7 @@ To display a Conversation widget by itself, place the Conversation's `<script>` 
 <script async src="https://launcher.spot.im/spot/SPOT_ID"
     data-spotim-module="spotim-launcher"
     data-post-url="ARTICLE_URL"
+    data-article-tags="ARTICLE_TOPIC1, ARTICLE_TOPIC2"    
     data-post-id="POST_ID"></script>
 ```
 
@@ -110,6 +113,7 @@ Add these parameters to the Conversation's `<script>` block on the article page.
 <script async src="https://launcher.spot.im/spot/SPOT_ID"
     data-spotim-module="spotim-launcher"
     data-post-id="POST_ID"
+    data-article-tags="ARTICLE_TOPIC1, ARTICLE_TOPIC2"
     data-post-url="ARTICLE_URL"
     data-disqus-url="DISQUS_URL"
     data-disqus-identifier="DISQUS_IDENTIFIER"></script>
@@ -127,6 +131,7 @@ Add this parameter to the Conversation's `<script>` block on the article page.
 <script async src="https://launcher.spot.im/spot/SPOT_ID"
     data-spotim-module="spotim-launcher"
     data-post-id="POST_ID"
+    data-article-tags="ARTICLE_TOPIC1, ARTICLE_TOPIC2"
     data-post-url="ARTICLE_URL"
     data-facebook-url="ARTICLE_URL"></script>
 ```
