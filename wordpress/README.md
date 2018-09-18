@@ -14,6 +14,15 @@ _Click here to watch a video walkthrough._
 6. Return to your WordPress dashboard and click **Settings** > **Spot.IM Settings** > **WP Sync**.
 7. Enter your Spot ID in the Spot ID text box, then click **Save Changes**.
 
+## Configuring Spot.IM Comments location
+
+In Advanced tab of the SpotIM plugin, you can see three options of positioning the comments:
+- Replace WordPress Comments - Spot.IM comments will be located where the WP comments widget appeared before.
+- After the content - Spot.IM comments will appear at the bottom of the page
+- Let the theme decide - This allows to place the Spot.IM comments in a custom position. 
+    When choosing this option, you need to inject 'SpotIM_Frontend::display_comments()' code wherever comments should be  
+    displayed.
+
 ## Importing Spot.IM Comments Into WordPress
 
 You can import your Spot.IM comments into WordPress. This allows you to view, moderate, and filter comments through the WordPress dashboard.
