@@ -20,8 +20,7 @@ In Advanced tab of the SpotIM plugin, you can see three options of positioning t
 - Replace WordPress Comments - Spot.IM comments will be located where the WP comments widget appeared before.
 - After the content - Spot.IM comments will appear at the bottom of the page
 - Let the theme decide - This allows to place the Spot.IM comments in a custom position. 
-    When choosing this option, you need to inject 'SpotIM_Frontend::display_comments()' code wherever comments should be  
-    displayed.
+    When choosing this option, you need to inject 'SpotIM_Frontend::display_comments()' code in themes -> choose the theme ->     single.php
 
 ## Importing Spot.IM Comments Into WordPress
 
