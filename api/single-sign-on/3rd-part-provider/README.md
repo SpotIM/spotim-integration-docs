@@ -62,7 +62,6 @@ With SSO, Spot.IM login UI never activated, and the login process needs to be in
 
 The publisher is notified with an event when the user attempts to send his message.
 
-![SSO Flow](require-login.png)
 
 **Example**
 ```javascript
