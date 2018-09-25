@@ -26,7 +26,7 @@ if (window.SPOTIM && window.SPOTIM.startSSOForProvider) {
   document.addEventListener('spot-im-api-ready', startSSO, false);
 }
 function startSSO(){
-  window.SPOTIM.startSSOForProvider({ provider: 'PROVIDER-NAME-FROM_SPOTIM', token: token }).then(function(userData) {
+  window.SPOTIM.startSSOForProvider({ provider: 'PROVIDER-NAME-FROM-SPOTIM', token: token }).then(function(userData) {
     // userData contains information about the logged in user
   })
   .catch(function(reason){
