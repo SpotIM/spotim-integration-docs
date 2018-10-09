@@ -11,6 +11,7 @@ If you are using WordPress, please see the [WordPress documentation page](../wor
   - [Standard Implementation](#standard-implementation)
   - [Other Options](#other-options)
     - [Standalone Conversation Widget](#standalone-conversation-widget)
+    - [Dynamic Conversation Widget in PHP](#dynamic-conversation-widget-in-php)
     - [Standalone Popular in the Community Widget](#standalone-popular-in-the-community-widget)
     - [Multiple Conversation Instances](#multiple-conversation-instances)
     - [Displaying the Number of Messages in a Conversation](#displaying-the-number-of-messages-in-a-conversation)
@@ -76,6 +77,7 @@ To display a Conversation widget by itself, place the Conversation's `<script>` 
     data-article-tags="ARTICLE_TOPIC1, ARTICLE_TOPIC2"    
     data-post-id="POST_ID"></script>
 ```
+
 ### Dynamic Conversation Widget in PHP
 
 To display a Conversation widget in WP, utilizing the information that is already on the WP system, you can place the following Conversation's `<script>` element in the location on the page where you want the widget to appear.
