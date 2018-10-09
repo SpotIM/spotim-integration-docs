@@ -76,6 +76,18 @@ To display a Conversation widget by itself, place the Conversation's `<script>` 
     data-article-tags="ARTICLE_TOPIC1, ARTICLE_TOPIC2"    
     data-post-id="POST_ID"></script>
 ```
+### Dynamic Conversation Widget in PHP
+
+To display a Conversation widget in WP, utilizing the information that is already on the WP system, you can place the following Conversation's `<script>` element in the location on the page where you want the widget to appear.
+
+```html
+<script async
+    data-spotim-module="spotim-launcher"
+    src="https://launcher.spot.im/spot/SPOT_ID"
+    data-post-url="<?php echo esc_url( get_permalink()); ?>"
+    data-article-tags="<?php echo implode(' ,', wp_get_post_tags( get_the_ID(), array( 'fields' => 'names' ) )); ?>"    
+    data-post-id="<?php echo get_the_ID(); ?>"></script>
+```
 
 ### Standalone Popular in the Community Widget
 
