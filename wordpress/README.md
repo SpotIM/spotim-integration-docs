@@ -14,6 +14,33 @@ _Click here to watch a video walkthrough._
 6. Return to your WordPress dashboard and click **Settings** > **Spot.IM Settings** > **WP Sync**.
 7. Enter your Spot ID in the Spot ID text box, then click **Save Changes**.
 
+## Default behavior of SpotIM plugin
+
+The plugin's default state is as follows:
+1. SpotIM comments widget is loaded on the following types of pages in your WP site:
+- Posts
+- Pages
+- Media
+2. SpotIM's comments count is disabled.
+3. Import of SpotIM's comments into WP comments system is disabled.
+4. SpotIM's comments widget is palced right below the content.
+5. SpotIM's popular in the community widget is enabled and will appear on your WP site once at least 10 articles have activity.
+6. SEO and OG tags are disabled.
+
+
+
+You may change each of the configurations above. Make sure to save changes on each page as you change it.
+
+### Default Spot.IM Comments location
+WP plugin injects the following elements in the location on the page where you want the widgets to appear. You can place these widgets anywhere, although we recommend placing them just below the page's main content.
+
+If you prefer to independently implement SpotIM conversation, please refer to the [Social Kit documentation page](../social-kit/README.md) 
+
+### Article Tags on WordPress
+SpotIM calssifies each article to topics, according to data-article-tags. SpotIM's WP plugin pulls the topics from the standard WP tags box. 
+![Image of a standard WP tags box](wp-tags-box.png)
+This data enables you to enjoy SpotIM's advanced features: recirculation per topic and community pages.
+
 ## Configuring Spot.IM Comments location
 
 In Advanced tab of the SpotIM plugin, you can see three options of positioning the comments:
