@@ -39,6 +39,7 @@ If you prefer to independently implement SpotIM conversation, please refer to th
 ### Article Tags on WordPress
 SpotIM calssifies each article to topics, according to data-article-tags. SpotIM's WP plugin pulls the topics from the standard WP tags box. 
 ![Image of a standard WP tags box](wp-tags-box.png)
+
 This data enables you to enjoy SpotIM's advanced features: recirculation per topic and community pages.
 
 ## Configuring Spot.IM Comments location
