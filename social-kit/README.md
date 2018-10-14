@@ -105,12 +105,11 @@ To display a Popular in the Community widget by itself, place the following elem
 To display a Popular in the Community Widget as a side bar by itself, place the following elements:
 Embed this code where you want the Social Side Rail to appear:
 
+```html
 <div style="color:#7B7F83;margin:15px;font-size:13px;text-transform:uppercase;">Popular in the Community</div>
-
 <div data-spotim-module="siderail" data-spot-id="SPOT_ID"></div>
-
 <script async src="https://mc-siderail.spot.im/spot/SPOT_ID" data-spotim-script="siderail"></script>
-
+```
 
 Replace marked parameters:
 
