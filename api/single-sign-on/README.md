@@ -123,6 +123,22 @@ In order to simplify the process Spot.IM expects the full data of the user as us
 https://www.spot.im/api/sso/v1/update_user?&access_token=03160206m9oGNw&primary_key=bar%40foo.com&user_name=bar&display_name=Bar%20Refaeli&image_url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F657706432087904256%2FbE7bSek8.jpg&email=bar%40foo.com&verified=true
 ```
 
+## Backend - deleting existing user
+
+The delete-user endpoint should be used when you’d like to delete an existing user.
+
+```
+DELETE https://www.spot.im/api/sso/v1/user/PRIMARY_KEY
+Header: x-spotim-sso-access-token:ACCESS_TOKEN
+```
+PRIMARY_KEY - The unique User ID (to be served as the primary key)
+ACCESS_TOKEN - The same SSO secret token obtained from Spot.IM
+
+The partner Backend should call Spot.IM Backend, when an account is deleted from the partner's site.
+Comments by the deleted user will be annonimized and not deleted. 
+Meaning, the comments will remain but will be linked to a random guest user.
+
+
 ## Integration for "Require Login" moderation policy
 
 Spot.IM allows moderators to activate a moderation policy which requires users to be logged in before writing comments.
