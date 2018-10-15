@@ -125,18 +125,20 @@ https://www.spot.im/api/sso/v1/update_user?&access_token=03160206m9oGNw&primary_
 
 ## Backend - deleting existing user
 
-The delete-user endpoint should be used when you’d like to delete an existing user.
+To remain GDPR compliant, it is necessary to delete a user's Spot.IM account, upon their request to delete their Publisher account. The delete-user endpoint below should be used when you’d like to delete an existing user.
 
 ```
 DELETE https://www.spot.im/api/sso/v1/user/PRIMARY_KEY
 Header: x-spotim-sso-access-token:ACCESS_TOKEN
 ```
+User's primaryKey should be placed in the PATH:
 PRIMARY_KEY - The unique User ID (to be served as the primary key)
+
+SSO Access Token should be placed as a header in the HTTPS request, named x-spotim-sso-access-token:
 ACCESS_TOKEN - The same SSO secret token obtained from Spot.IM
 
 The partner Backend should call Spot.IM Backend, when an account is deleted from the partner's site.
-Comments by the deleted user will be annonimized and not deleted. 
-Meaning, the comments will remain but will be linked to a random guest user.
+Comments by the deleted user will be annonimized, meaning, the comments will remain but will be linked to a random guest user.
 
 
 ## Integration for "Require Login" moderation policy
