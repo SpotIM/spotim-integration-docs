@@ -19,7 +19,8 @@ The first step is identifying which Livefyre comments get imported into which Sp
 To summarize, SpotIM Conversation embed code should look as follows for Livefyre import:
 
 ```html
-<script async src="https://launcher.spot.im/spot/SPOT_ID" data-spotim-module="spotim-launcher" data-post-id="POST_ID" data-livefyre-url="LIVEFYRE_ARTICLE_ID">
+<script async src="https://launcher.spot.im/spot/SPOT_ID" data-spotim-module="spotim-launcher" 
+        data-post-id="POST_ID" data-livefyre-url="LIVEFYRE_ARTICLE_ID">
 ```
 
 Livefyre's article ID can be found in the following location in the Livefyre embed code:
