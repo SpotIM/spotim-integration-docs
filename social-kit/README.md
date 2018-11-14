@@ -88,7 +88,7 @@ To display a Conversation widget in WP, utilizing the information that is alread
     data-spotim-module="spotim-launcher"
     src="https://launcher.spot.im/spot/SPOT_ID"
     data-post-url="<?php echo esc_url( get_permalink()); ?>"
-    data-article-tags="<?php echo implode(', ', wp_get_post_tags( get_the_ID(), array( 'fields' => 'names' ) )); ?>"    
+    data-article-tags="<?php echo implode(', ', wp_get_post_tags( get_the_ID(), array( 'fields' => 'slugs' ) )); ?>"    
     data-post-id="<?php echo get_the_ID(); ?>"></script>
 ```
 
