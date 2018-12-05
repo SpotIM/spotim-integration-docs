@@ -31,7 +31,7 @@ Post IDs should be short. A common approach is to use the page's title or conten
 `article-title`
 `article-short-link`
 
-## Using AMP
+## Using AMP for Conversation
 
 Spot.IM's AMP implementation wraps the standard Spot.IM Conversation into an AMP iframe. Because of this, the Conversation appears static. When a user taps on the Conversation, a new browser tab opens and displays the standard Conversation interface.
 
@@ -60,3 +60,15 @@ _**Note:** If you have an existing `<style amp-custom>` tag, append the followin
     <div overflow class="spot-im-amp-overflow" tabindex="0" role="button" aria-label="Read more">Load more...</div>
 </amp-iframe>
 ```
+
+## Using AMP for the whole Social Kit
+At the moment, Popular in the Community Widget has AMP-compatible code in Beta stages.
+If you wish to implement on AMP both Popular in the Community and Conversation, please reach out to your account manager.
+
+From the account manager you will recieve two html files:
+1. Header - styling code to be added to your head section. It will be an HTML code snippet, wrapped with <style amp-custom> tags. _**Note:** If you have an existing `<style amp-custom>` tag, append the following class definition to that tag._
+  
+2. Body - Code of the Popular in the Community and Conversation, a.k.a the SpotIM standard implementation. If your AMP implementation is based on your general site template, replace the entire SpotIM block of code with the provided code in the HTML file. If not, position the code in the place you want to implement both of the widgets.
+The file with the implementation code to be pasted into the Body of the page has the conversation AMP implemantation code presented above, with your `SPOT_ID` - https://github.com/SpotIM/spotim-integration-docs/tree/master/google-amp#using-amp-for-Conversation. Make sure to replace the `POST_ID` parameter with your own value.
+
+_**Note:** By default, this code will present Conversation below Popular in the Community Widget. If you prefer differently, make sure to ask your Account Manager for this adjustment. 
