@@ -67,9 +67,10 @@ At the moment, Popular in the Community Widget has AMP-compatible code in Beta s
 If you wish to implement on AMP both Popular in the Community and Conversation, please reach out to your account manager.
 
 From the account manager you will recieve two html files:
-1. Header - styling code to be added to your head section. It will be an HTML code snippet, wrapped with <style amp-custom> tags. _**Note:** If you have an existing `<style amp-custom>` tag, append the following class definition to that tag._
+1. Header - styling code to be added to your head section. It will be an HTML code snippet, wrapped with <style amp-custom> tags. _**Note:** If you have an existing `<style amp-custom>` tag, append the snippet you recieve to that tag.
   
-2. Body - Code of the Popular in the Community and Conversation, a.k.a the SpotIM standard implementation. If your AMP implementation is based on your general site template, replace the entire SpotIM block of code with the provided code in the HTML file. If not, position the code in the place you want to implement both of the widgets.
-The file with the implementation code to be pasted into the Body of the page has the conversation AMP implemantation code presented above, with your `SPOT_ID` - https://github.com/SpotIM/spotim-integration-docs/tree/master/google-amp#using-amp-for-conversation. Make sure to replace the `POST_ID` parameter with your own value.
+2. Body - Code of the Popular in the Community and Conversation, a.k.a the SpotIM standard implementation. If your AMP implementation is based on your general site template, replace the entire SpotIM block of code with the the snippet you recieve. If not, position the code in the place you want to implement both of the widgets.
+
+The file with the implementation code to be pasted into the Body of the page has the conversation AMP implemantation code presented above, with your `SPOT_ID` already configured - https://github.com/SpotIM/spotim-integration-docs/tree/master/google-amp#using-amp-for-conversation. Make sure to replace the `POST_ID` parameter with your own value.
 
 _**Note:** By default, this code will present Conversation below Popular in the Community Widget. If you prefer differently, make sure to ask your Account Manager for this adjustment. 
