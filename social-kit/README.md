@@ -134,7 +134,7 @@ The import process is triggered by an _import hint_, which is a set of parameter
 Importing comments from Disqus requires two additional attributes:
 
 - `data-disqus-url` - [`disqus_url` or `this.page.url`](https://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables#thispageurl) parameter in your Disqus integration code.
-- `data-disqus-identifier` - [`disqus_identifier`](https://help.disqus.com/customer/portal/articles/472099-what-is-a-disqus-identifier-) parameter in your Disqus integration code.
+- `data-disqus-identifier` - [`disqus_identifier`](https://help.disqus.com/customer/portal/articles/472099-what-is-a-disqus-identifier-) parameter in your Disqus integration code. Has a pattern of postID<whitespace>https://admin.publisher.domain/?p=postID"
 
 Add these parameters to the Conversation's `<script>` block on the article page.
 
