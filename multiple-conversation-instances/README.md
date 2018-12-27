@@ -27,11 +27,17 @@ On the page, make sure you have a div element with the following general structu
     data-post-id="POST_ID"></script>
 ```
 In order to load the conversation, use the following command:
+
+```js
 SPOTIM.initConversation(document.querySelector('#comments-wrapper'));
+```
 
 ### Terminate Conversation
 In order to terminate the conversation, use the following command:
+
+```js
 SPOTIM.terminateConversation(document.querySelector('#comments-wrapper'));
+```
 
 ## Infinite Scroll
 
