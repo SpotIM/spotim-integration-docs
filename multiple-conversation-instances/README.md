@@ -4,7 +4,39 @@ You can embed multiple Conversations on the same page. Some features such as inf
 
 **Important:** The `POST_ID` and `ARTICLE_URL` parameters must match the article that the Conversation relates to. If the URL changes while a user is using an infinite scroll Conversation or swapping articles in an SPA, ensure that the Conversation's `ARTICLE_URL` matches the new URL. Using an identical `ARTICLE_URL` in two different Conversations could lead to a corruption in the system. Each Conversation should also refer to a different `POST_ID`, otherwise the same Conversation will be loaded multiple times.
 
-## Adding an Instance
+## Single Page Applications (SPAs)
+
+### Initial load
+Use regular [Social Kit instructions](../social-kit/README.md) , and add to the launcher div the following attribute: data-spotim-multi-instance="true", as follows:
+
+```html
+<script async src="https://launcher.spot.im/spot/SPOT_ID"
+    data-spotim-module="spotim-launcher"
+    data-post-url="ARTICLE_URL"
+    data-article-tags="ARTICLE_TOPIC1, ARTICLE_TOPIC2"    
+    data-post-id="POST_ID"
+    data-spotim-multi-instance="true"></script>
+```
+
+### Launch Conversation
+On the page, make sure you have a div element with the following general structure:
+```html
+<div id="comment-wrapper" data-spot-id="SPOT_ID"
+    data-post-url="ARTICLE_URL"
+    data-article-tags="ARTICLE_TOPIC1, ARTICLE_TOPIC2"    
+    data-post-id="POST_ID"></script>
+```
+In order to load the conversation, use the following command:
+SPOTIM.initConversation(document.querySelector('#comment-wrapper'));
+
+### Terminate Conversation
+In order to terminate the conversation, use the following command:
+SPOTIM.terminateConversation(document.querySelector('comment-wrapper'));
+
+## Infinite Scroll
+
+
+### Adding an Instance
 
 The following HTML creates a Conversation container and adds a Conversation using JavaScript. Make sure to replace `SPOT_ID`, `POST_ID`, and `ARTICLE_URL` with your own values.
 
@@ -36,7 +68,7 @@ The following HTML creates a Conversation container and adds a Conversation usin
 </script>
 ```
 
-## Removing an Instance
+### Removing an Instance
 
 To remove one or more Conversation instances, simply clear their containers:
 
