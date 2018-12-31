@@ -4,9 +4,11 @@ Spot.IM SEO service aims to allow Google to index the comments and ratings data 
 
 Working with this API requires basic knowledge with Schema.org and specifically with its CreativeWork specification, as Spot.IM will return data in that format.
 
-All the Partner needs to do is embed the returned data in his HTML.
 
-**API endpoint**
+
+## Frontend SEO Integration
+To enable this feature, all publisher needs to do is to add the attribute `data-seo-enabled="true"` to the Spot.IM embed code.
+This will cause Spot.IM to perform the following endpoint call, and embed the returned data in the partner's HTML:
 `https://seo.spot.im/v2/<schema-name>/<spot-id>/<post-id>?json=<true/false>`
 
 | Parameter 	| Description 	| Example 	|
