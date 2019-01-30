@@ -107,8 +107,8 @@ Embed this code where you want the Social Side Rail to appear:
 
 ```html
 <div style="color:#7B7F83;margin:15px;font-size:13px;text-transform:uppercase;">Popular in the Community</div>
-<div data-spotim-module="siderail" data-spot-id="SPOT_ID"></div>
-<script async src="https://mc-siderail.spot.im/spot/SPOT_ID" data-spotim-script="siderail"></script>
+<div data-spotim-module="recirculation" data-spot-id="SPOT_ID"></div>
+<script async src="https://recirculation.staging-spot.im/spot/SPOT_ID/siderail" data-spotim-script="recirculation"></script>
 ```
 
 Replace marked parameters:
