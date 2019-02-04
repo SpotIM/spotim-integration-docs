@@ -74,6 +74,29 @@ The following HTML creates a Conversation container and adds a Conversation usin
 </script>
 ```
 
+### Adding a Popular in the Community Instance
+
+The following HTML creates a Popular in the Community container and adds a Popular in the Community using JavaScript. Make sure to replace `SPOT_ID` with your own values.
+
+```html
+<div class="spotim-container"></div>
+<script>
+  var spotId = 'SPOT_ID';
+  // get reference to the container:
+  var container = document.querySelector('.spotim-container');
+  // create the elements and set all attributes:
+  var recirculationDiv = document.createElement('div');
+  recirculationDiv.setAttribute('data-spotim-module', 'recirculation');
+  recirculationDiv.setAttribute('data-spot-id', spotId);
+  var recirculationScript = document.createElement('script');
+  recirculationScript.setAttribute('async', 'true');
+  recirculationScript.setAttribute('src', 'https://recirculation.spot.im/spot/' + spotId);
+  // append the elements to the container:
+  container.appendChild(recirculationDiv);
+  container.appendChild(recirculationScript);
+</script>
+```
+
 ### Removing an Instance
 
 To remove one or more Conversation instances, simply clear their containers:
