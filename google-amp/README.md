@@ -8,6 +8,7 @@ Spot.IM supports Accelerated Mobile Page (AMP). If you're not familiar with AMP,
 - [Before You Begin](#before-you-begin)
   - [Best Practices for Post IDs](#best-practices-for-post-ids)
 - [Using AMP for Conversation](#using-amp-for-conversation)
+- [Using AMP for LiveBlog](#using-amp-for-live-blog)
 - [Using AMP for the Standard Social Kit](#using-amp-for-the-standard-social-kit)
 
 ## Before You Begin
