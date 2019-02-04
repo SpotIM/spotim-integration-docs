@@ -95,7 +95,7 @@ LIVEBLOG_EVENT_ID - It's a unique ID for each LiveBlog page, provided by the Adm
 <amp-iframe width="375" height="815" resizable
 sandbox="allow-scripts allow-popups allow-same-origin allow-top-navigation"
 layout="responsive"
-frameborder="0" src="https://amp.spot.im/production.html?spot_im_highlight_immediate&SPOT_ID=sp_G2rNe9BX&eventCode=LIVEBLOG_EVENT_ID">
+frameborder="0" src="https://amp.spot.im/production.html?spot_im_highlight_immediate&spotId=SPOT_ID&eventCode=LIVEBLOG_EVENT_ID">
 <amp-img placeholder height="815" layout="fill" src="//amp.spot.im/loader.png"></amp-img>
 <div overflow class="spot-im-amp-overflow" tabindex="0" role="button" aria-label="Read more">Load more...</div>
 </amp-iframe>
