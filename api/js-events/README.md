@@ -77,6 +77,15 @@ The user has chosen to share the comment on a specific option. Event details inc
 ##### `spot-im-clicked-flag`
 The user has clicked on the "Report" option.
 
+##### `spot-im-show-more-comments-clicked`
+The user has clicked on the "Show More Comments" button.
+
+##### `spot-im-show-more-replies-clicked`
+The user has clicked on the "Show More Replies" button. Event details include the parent ID of the replies.
+
+##### `spot-im-open-user-profile`
+The user has clicked on the "View Profile" button of a specific user. Event details include the User ID.
+
 ##### `spot-im-realtime-new-message`
 A new message appeared in the Conversation or the Live Blog in real-time.
 `event.detail`:
