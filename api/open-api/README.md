@@ -16,12 +16,14 @@ Body:
 {
 "spot_id": "SPOT_ID",
 "token": "EXPORT_TOKEN",
-"since": "TIMESTAMP"
+"since": "TIMESTAMP",
+"to": "TIMESTAMP"
 }
 ```
 SPOT_ID - Your Spot ID. 
 EXPORT_TOKEN - Export secret token obtained from Spot.IM, and available on your Admin Panel
 TIMESTAMP - for example, 2018-12-01T00:00:0
+Default value for "to" field is now.
 
 In Response, you will get a GUID as your export identifier. Response Body for example, 
 ```
