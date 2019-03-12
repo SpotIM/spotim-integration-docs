@@ -40,8 +40,15 @@ GET https://open-api.spot.im/v1/comments/EXPORT_ID/status?token=EXPORT_TOKEN&spo
 In response, you will get the following response:
 ```
 {
+    "status": "Processing"
+}
+```
+The above message appears while the request is being processed and export URLs are being generated.
+Once done, a response as described below, is presented:
+```
+{
     "status": "Done",
-    "export_urls": [],
+    "export_urls": [<SECURED-URLS>],
     "count": 0
 }
 ```
