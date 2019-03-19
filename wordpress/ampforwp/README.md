@@ -24,6 +24,6 @@ Publisher can update the hook and use it where they can.
 ```
 It is required as The tag 'amp-iframe' requires including the 'amp-iframe' extension JavaScript.
 
-Add above script as shown here and Save Changes.
+Add above script as shown ![here](amp-plugin-settings.png) and Save Changes.
 
 
