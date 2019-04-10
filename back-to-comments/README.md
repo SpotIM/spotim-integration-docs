@@ -1,6 +1,6 @@
 # Go Back To Comments
 
-We define going-back-to-comments as the flow that occurs once a User navigates to an article's page with the intention of seeing the comments (i.e by clicking on a Notification/Shared Link...).
+We define going-back-to-comments as the flow that occurs when a User navigates to an article's page with the intention of seeing the comments (i.e by clicking on a Notification/Shared Link...).
 
 In those cases, once the page gets loaded and the conversation adheres, the page will scroll automatically to the conversation section and the shared comment will be highlighted.
 
@@ -12,11 +12,11 @@ In some cases, partners implement Spot.IM's Conversation behind a button. In the
 
 To overcome this, Partners can do one of the following:
 
-### Method 1 - Add a function to the Conversation window (recommended)
+#### Method 1 - Add a function to the Conversation window (recommended)
 
 In this method, the Publisher should add a function named `showSpotimConversation` to the conversation's window, that method should load the conversation (pretty much do whatever the button is doing).
 
-### Method 2 - Set Button ID to `spotimCommentsButton`
+#### Method 2 - Set Button ID to `spotimCommentsButton`
 
 In this method, the Publisher should set the ID of the button used to open the conversation to `spotimCommentsButton`. For example:
 
