@@ -20,7 +20,7 @@ add_action( 'ampforwp_after_post_content', function() {
 Publisher can update the hook and use it where they can.
 2. Add below given script in the head to get it working.
 ```html
-<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"</script>
+<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 ```
 It is required as The tag 'amp-iframe' requires including the 'amp-iframe' extension JavaScript.
 
