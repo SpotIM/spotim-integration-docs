@@ -4,7 +4,7 @@ For more information contact Spot.IM at https://www.spot.im/contact/
 
 
 **Getting Started:**
-* [Before you begin](social-kit/README.md#before-you-begin) - Understanding your personal Spot ID and Post IDs before getting started. 
+* [Before you begin](basics/README.md) - Understanding your personal Spot ID and Post IDs before getting started. 
 
 
 **Features:**
