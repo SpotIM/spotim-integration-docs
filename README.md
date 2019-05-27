@@ -5,7 +5,7 @@ This repository contains instructions for integrating Spot.IM onto your site.
 Products: 
 * [Social Kit](social-kit/README.md) - Conversation and Popular in the Community widgets
     * [Conversation](conversation/README.md) - Power conversation with Real-Time Conversation, a lightweight and fully customizable module to inspire your audience to engage. Complete with automatic moderation for illicit chatter, Real-Time Conversation will help boost pageviews and SEO rankings.
-        * [Importing Conversations]() - Import [Facebook](social-kit/README.md#facebook), Wordpress, [Disqus Posts](social-kit/README.md#disqus), and/or [Livefyre Posts](conversation/import-posts/livefyre-import/README.md)
+        * [Importing Conversations](social-kit/README.md#Integrations) - Import [Facebook](social-kit/README.md#facebook), Wordpress, [Disqus Posts](social-kit/README.md#disqus), and/or [Livefyre Posts](conversation/import-posts/livefyre-import/README.md)
     * [Recirculation](recirculation/README.md) - Community Recirculation promotes the most popular content from your site by showcasing user-generated content (UGC). This unit drives users to more of your content and features a monetization component so you can generate meaningful revenue via revshare.
     * Improving [SEO](seo/README.md) with Spot.IM
     * Integrating Spot.IM in [Google AMP](google-amp/README.md)
