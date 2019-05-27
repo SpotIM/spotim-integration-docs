@@ -6,7 +6,7 @@ Products:
 * [Social Kit](social-kit/README.md) - Conversation and Popular in the Community widgets
     * [Conversation](conversation/README.md) - Power conversation with Real-Time Conversation, a lightweight and fully customizable module to inspire your audience to engage. Complete with automatic moderation for illicit chatter, Real-Time Conversation will help boost pageviews and SEO rankings.
         * [Importing Conversations]() - Import [Facebook, Wordpress, Disqus Posts](conversation/import-posts/import/README.md), and/or [Livefyre Posts](conversation/import-posts/livefyre-import/README.md)
-    * [Recirculation]() - 
+    * [Recirculation](recirculation/README.md) - Community Recirculation promotes the most popular content from your site by showcasing user-generated content (UGC). This unit drives users to more of your content and features a monetization component so you can generate meaningful revenue via revshare.
     * Improving [SEO](seo/README.md) with Spot.IM
     * Integrating Spot.IM in [Google AMP](google-amp/README.md)
 * [Community Spotlight](spotlight/README.md) - 
