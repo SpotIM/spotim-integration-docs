@@ -4,8 +4,8 @@ This repository contains instructions for integrating Spot.IM onto your site.
 
 Products: 
 * [Social Kit](social-kit/README.md) - Conversation and Popular in the Community widgets
- * [Conversation]() - 
- * [Recirculation]() - 
+    * [Conversation]() - 
+    * [Recirculation]() - 
 * [Spotlight]() - 
 * [Community]() -
 
@@ -19,5 +19,3 @@ More:
 
 
 ![Spot.IM](banner.png)
-[Spot.IM](banner.png)
-
