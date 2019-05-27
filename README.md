@@ -9,8 +9,8 @@ Products:
     * [Recirculation]() - 
     * Improving [SEO](seo/README.md) with Spot.IM
     * Integrating Spot.IM in [Google AMP](google-amp/README.md)
-* [Spotlight]() - 
-* [Community]() -
+* [Community Spotlight](spotlight/README.md) - 
+* [Community](community/README.md) -
 
 Network Preferences:
 * [Single Sign On (SSO)](api/single-sign-on/README.md) with Spot.IM

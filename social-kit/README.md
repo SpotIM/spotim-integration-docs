@@ -1,6 +1,10 @@
 # Spot.IM Social Kit
 
-The Spot.IM Social Kit consists of two components: Conversation and Popular in the Community. These components allow your users to write comments and view popular community-generated content.
+The Spot.IM Social Kit consists of two components: Real-Time Conversation and Community Recirculation. These components allow your users to write comments and view popular community-generated content.
+
+Power conversation with Real-Time Conversation, a lightweight and fully customizable module to inspire your audience to engage. Complete with automatic moderation for illicit chatter, Real-Time Conversation will help boost pageviews and SEO rankings.
+
+Community Recirculation promotes the most popular content from your site by showcasing user-generated content (UGC). This unit drives users to more of your content and features a monetization component so you can generate meaningful revenue via revshare.
 
 If you are using WordPress, please see the [WordPress documentation page](../wordpress/README.md).
 
