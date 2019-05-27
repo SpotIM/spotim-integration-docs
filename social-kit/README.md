@@ -1,5 +1,4 @@
 # Spot.IM Social Kit
-
 The Spot.IM Social Kit consists of two components: Real-Time Conversation and Community Recirculation. These components allow your users to write comments and view popular community-generated content.
 
 Power conversation with Real-Time Conversation, a lightweight and fully customizable module to inspire your audience to engage. Complete with automatic moderation for illicit chatter, Real-Time Conversation will help boost pageviews and SEO rankings.
@@ -9,7 +8,6 @@ Community Recirculation promotes the most popular content from your site by show
 If you are using WordPress, please see the [WordPress documentation page](../wordpress/README.md).
 
 ## Contents
-
   - [Before You Begin](#before-you-begin)
     - [Best Practices for Creating Post IDs](#best-practices-for-creating-post-ids)
   - [Standard Implementation](#standard-implementation)
@@ -25,13 +23,11 @@ If you are using WordPress, please see the [WordPress documentation page](../wor
     - [Facebook](#facebook)
 
 ## Before You Begin
-
 Before using the Spot.IM Social Kit, you will need your Spot.IM `Spot ID`. You will also need to create a `Post ID` for each article or page that you want to display the Social Kit on. You can use any alphanumeric value as a `Post ID`, but it must be unique to each page. See the following section for [best practices for creating Post IDs](#best-practices-for-creating-post-ids).
 
 Additionally, your article pages will need to contain [OG Tags](https://blog.kissmetrics.com/open-graph-meta-tags/) tags. OG tags are meta tags that define the title, type, preview image, and other attributes of each article on your website. Each page must contain these tags in order for the Popular in the Community to generate previews of the article.
 
 ### Best Practices for Creating Post IDs
-
 A Post ID can be any alphanumeric value that uniquely identifies a page. Post IDs can contain the following characters:
 
 - Letters
@@ -46,7 +42,6 @@ Post IDs should be short. A common approach is to use the page's title or conten
 - `article-short-link`
 
 ## Standard Implementation
-
 The Social Kit standard implementation adds two widgets to each page: the Conversation widget and the Popular in the Community widget. The Conversation widget lets your users view and create comments, while the Popular in the Community widget showcases popular user-generated content.
 
 ![Image of a standard implementation](social-kit.png)
