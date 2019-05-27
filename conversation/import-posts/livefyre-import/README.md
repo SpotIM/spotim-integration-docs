@@ -1,10 +1,8 @@
 # Importing Livefyre Comments into Spot.IM
-
 This document outlines the process Spot.IM uses to import data from Livefyre. After reading this document, you will have a better understanding of what the import process requires, how it's performed, and how your users can start using Spot.IM once the import is complete.
 
 
 ## The Import Process
-
 The import process consists of three steps:
 
 1. Spot.IM Conversations are associated with a Livefyre comment thread
@@ -14,7 +12,6 @@ The import process consists of three steps:
 At the end of this process, your users can begin commenting using Spot.IM.
 
 ## Linking Spot.IM Conversations to Livefyre Threads
-
 The first step is identifying which Livefyre comments get imported into which Spot.IM Conversation. Each Livefyre comment thread is identified by a unique `articleId`, which associates the thread to an article or page on your website. This is similar to the `postId` used to identify Spot.IM Conversations. Spot.IM uses the `articleId` and `postId` to determine which Spot.IM Conversation to import a Livefyre thread to. This ensures that all comments belonging to a single Livefyre thread are linked to the same Spot.IM Conversation. This also allows Spot.IM to import a single comment thread at a time, which is explained in more detail in the next section.
 To summarize, SpotIM Conversation embed code should look as follows for Livefyre import:
 
@@ -38,7 +35,6 @@ To allow SpotIM team to trigger Livefyre Import, please provide siteID of Livefy
 
 
 ## Importing Comments into Spot.IM
-
 Spot.IM provides two approaches to importing comments: a gradual import approach, and a bulk import approach. While the gradual import approach is recommended, the bulk import approach offers an alternative in case the first approach results in discrepancies. The benefits of each approach are listed below.
 
 ### Gradual Import
