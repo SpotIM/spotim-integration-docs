@@ -110,6 +110,7 @@ The update-user endpoint should be used when you’d like to update an existing 
 
 ```
 GET https://www.spot.im/api/sso/v1/update-user
+Header: x-spotim-sso-access-token:ACCESS_TOKEN
 ```
 
 The parameters are the same as the register-user except for the `code_a` parameter.
