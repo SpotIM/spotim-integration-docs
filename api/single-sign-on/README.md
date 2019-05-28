@@ -121,7 +121,7 @@ In order to simplify the process Spot.IM expects the full data of the user as us
 
 **Example**
 ```
-https://www.spot.im/api/sso/v1/update-user?primary_key=3169059&user_name=eliseps_3169059&display_name=ElisePS&email=ehwebnews@gmail.com&verified=true
+https://www.spot.im/api/sso/v1/update-user?primary_key=3169059&user_name=[]&display_name=[]&email=[]&verified=true
 ```
 
 ## Backend - deleting existing user
