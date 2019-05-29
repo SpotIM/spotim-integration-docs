@@ -14,6 +14,9 @@ Yes. Community Spotlight is able to present native ads instead of the recommende
 *Is Community Spotlight rev share different from other Spot.IM monetization opportunities?*<br>
 No. The same conditions apply.
 
+*Is Community Spotlight customizable?*<br>
+Yes! Currently, there are two types of Commmunity Spotlights offered, email capture and comment driver. Email capture enables you to collect email addresses of users. Comment driver allows a site to drive awareness of our conversation widget by automaticaly scrolling to the conversation widget when a user clicks on the Community Spotlight widget. You can also customize Community Spotlight logo, text, and color. 
+
 ### Implementation
 Community Spotlight is extremely easy to implement. Implementation is dependent on whether you have our conversation widget already active on the page. Please place the appropriate code into where you would like Community Spotlight to load.
 
