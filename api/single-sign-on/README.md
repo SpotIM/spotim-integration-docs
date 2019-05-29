@@ -110,6 +110,7 @@ The update-user endpoint should be used when you’d like to update an existing 
 
 ```
 GET https://www.spot.im/api/sso/v1/update-user
+Header: x-spotim-sso-access-token:ACCESS_TOKEN
 ```
 
 The parameters are the same as the register-user except for the `code_a` parameter.
@@ -120,7 +121,7 @@ In order to simplify the process Spot.IM expects the full data of the user as us
 
 **Example**
 ```
-https://www.spot.im/api/sso/v1/update_user?&access_token=03160206m9oGNw&primary_key=bar%40foo.com&user_name=bar&display_name=Bar%20Refaeli&image_url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F657706432087904256%2FbE7bSek8.jpg&email=bar%40foo.com&verified=true
+https://www.spot.im/api/sso/v1/update-user?primary_key=3169059&user_name=[]&display_name=[]&email=[]&verified=true
 ```
 
 ## Backend - deleting existing user
