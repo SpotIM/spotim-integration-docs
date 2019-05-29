@@ -1,5 +1,4 @@
 # WordPress Integration
-
 Spot.IM provides a plugin for integrating with WordPress.
 
 [![How to Install the Spot.IM WordPress Plugin](https://img.youtube.com/vi/U-TWO8k0ojI/0.jpg)](https://www.youtube.com/watch?v=U-TWO8k0ojI)

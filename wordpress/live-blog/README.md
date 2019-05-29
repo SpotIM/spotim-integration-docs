@@ -1,5 +1,4 @@
 # Spot.IM LiveBlog
-
 Spot.IM support a special type of Conversation called LiveBlog. 
 It allows pre-defined users to report live on an event, with a pre-defined time frame.
 During the live reporting phase, Reporters' newest messeges will appear on top.
@@ -7,7 +6,6 @@ Once live coverage timeframe is expired, order of messeges will turn to oldest a
 To allow implementation of liveBlog in WP, you need to create a liveBlog event in the admin console.
 
 ## Create LiveBlog Event
-
 1. Go to Features-> Live Blog and click "Create New Event".
 2. Enter Title, Location, and the time frame you want the liveBlog to be on.
 3. Once created, go to your LiveBlog and click "Manage". 
@@ -16,7 +14,6 @@ To allow implementation of liveBlog in WP, you need to create a liveBlog event i
 If you prefer to disable the ability to reply to Reporters' comments, please contact support, to enable such configuration.
 
 ## Implement LiveBlog Event in your WP site
-
 You can copy the embed code with all related data from the settings tab of the liveBlog itself.
 Structure is as follows:
 <script src="https://launcher.spot.im/spot/SPOT_ID"

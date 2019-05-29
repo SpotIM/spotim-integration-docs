@@ -1,11 +1,8 @@
 # Open API Integration to Spot.IM
-
-
-Our Open API allows publishers to build their own backup of SpotIM's comments data, for their internal use.
+Our Open API allows publishers to build their own backup of SpotIM's post and replies data, for their internal use.
 
 ## Export to CSV
-
-You can trigger the export of your comments to CSV using the following endpoint:
+You can trigger the export of your posts to CSV using the following endpoint:
 
 ```
 POST https://open-api.spot.im/v1/comments/export

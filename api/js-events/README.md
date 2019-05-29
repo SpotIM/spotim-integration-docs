@@ -1,5 +1,4 @@
 # Client-Side events
-
 For different events occurring in our products we allow the publishers to add event listeners on client side.
 
 ## Event Listener Registration

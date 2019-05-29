@@ -1,2 +1,2 @@
-# Recirculation
-Community Recirculation promotes the most popular content from your site by showcasing user-generated content (UGC). This unit drives users to more of your content and features a monetization component so you can generate meaningful revenue via revshare.
+# Popular-in-the-Community
+Popular-in-the-Community, or Recirculation, promotes the most popular content from your site by showcasing user-generated content (UGC). This unit drives users to more of your content and features a monetization component so you can generate meaningful revenue via revshare.

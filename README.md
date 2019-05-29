@@ -15,24 +15,24 @@ For more information contact Spot.IM at https://www.spot.im/contact/
     * [Back-to-comments](conversation/back-to-comments/README.md)
     * [Multiple Conversation Instances](conversation/multiple-conversation-instances/README.md)
     * Community Question - Engage your community with a custom question or call to action displayed above the conversation.
-* [Popular in the Community](recirculation/README.md) - Popular in the Community, or Community Recirculation, promotes your page's content by showcasing user-generated content.
-* [Community Spotlight](spotlight/README.md) - Community Spotlight showcases your community.
-* [Community Pages](community/README.md) - Community Pages
-    * [Community Promo](community/community-promo/README.md)
+* [Popular-in-the-Community](recirculation/README.md) - Popular-in-the-Community, or Community Recirculation, promotes your page's content by showcasing user-generated content.
+* [Community Spotlight](spotlight/README.md) - Community Spotlight gives a call to action: enter your email or go directly to conversation.
+* [Community Pages](community/README.md) - Community Pages use your articles, alongside user generated content, to create new pages.
+    * [Community Promo](community/community-promo/README.md) - Drive traffic to your community pages.
 
 
 **Network Options:**
-* [Open API](api/open-api/README.md)
-* [Single Sign On (SSO)](api/single-sign-on/README.md)
+* [Open API](api/open-api/README.md) - Backup your user generated content.
+* [Single Sign On (SSO)](api/single-sign-on/README.md) - Users sign in on your site(s), not Spot Widgets. 
 
 
 **More:**
-* Integrating Spot.IM in [Google AMP](google-amp/README.md)
+* [Google AMP](google-amp/README.md)
 * [Improve SEO](seo/README.md) with Spot.IM
 * [WordPress Integration](wordpress/README.md)
     * [AMP for WordPress](wordpress/ampforwp/README.md)
-    * [Live-Blog on WordPress](wordpress/live-blog/README.md)
-* Registering listeners for [client-side events](api/js-events/README.md)
+    * [LiveBlog on WordPress](wordpress/live-blog/README.md)
+* [client-side events](api/js-events/README.md) - Registering listeners for special actions when a user uses Spot.IM Widgets. 
 
 
 <!-- UPDATE BANNER!!! -->

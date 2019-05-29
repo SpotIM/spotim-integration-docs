@@ -1,9 +1,9 @@
 # Spot.IM Social Kit
-The Spot.IM Social Kit consists of two components: Real-Time Conversation and Community Recirculation. These components allow your users to write comments and view popular community-generated content.
+The Spot.IM Social Kit consists of two components: Real-Time Conversation and Popular-in-the-Community. These components allow your users to write comments and replies to your articles, and view popular community-generated content on your articles.
 
-Power conversation with Real-Time Conversation, a lightweight and fully customizable module to inspire your audience to engage. Complete with automatic moderation for illicit chatter, Real-Time Conversation will help boost pageviews and SEO rankings.
+Power conversation with Real-Time Conversation, a lightweight and fully customizable module to inspire your audience to engage. Complete with automatic moderation for illicit or toxic chatter, Real-Time Conversation will help boost pageviews and SEO rankings.
 
-Community Recirculation promotes the most popular content from your site by showcasing user-generated content (UGC). This unit drives users to more of your content and features a monetization component so you can generate meaningful revenue via revshare.
+Popular-in-the-Community promotes the most popular content from your site by showcasing user-generated content (UGC). This unit drives users to more of your content and features a monetization component so you can generate meaningful revenue via revshare.
 
 If you are using WordPress, please see the [WordPress documentation page](../wordpress/README.md).
 
@@ -42,7 +42,7 @@ Post IDs should be short. A common approach is to use the page's title or conten
 - `article-short-link`
 
 ## Standard Implementation
-The Social Kit standard implementation adds two widgets to each page: the Conversation widget and the Popular in the Community widget. The Conversation widget lets your users view and create comments, while the Popular in the Community widget showcases popular user-generated content.
+The Social Kit standard implementation adds two widgets to each page: Real-Time Conversation Widget and the Popular-in-the-Community Widget. The Conversation Widget lets your users view and create comments, while the Popular-in-the-Community Widget showcases popular user-generated content.
 
 ![Image of a standard implementation](social-kit.png)
 
@@ -51,7 +51,7 @@ To add these widgets to your page, place the following elements in the location 
 You will need to replace the following placeholders:
 - `SPOT_ID` - Your Spot ID. **Notice** that the `SPOT_ID` appears in 3 places.
 - `POST_ID` in `data-post-id` attribute - A unique identifier for this Conversation.
-- `ARTICLE_TOPIC` in `data-article-tags` attribute - Main topics of the article. Can include several topics, separated by ",".This attribute is optional, and is used to support SpotIM's advanced features, such as Topic Pages, Recirculation by Topic, etc.
+- `ARTICLE_TOPIC` in `data-article-tags` attribute - Main topics of the article. Can include several topics, separated by ",".This attribute is optional, and is used to support Spot.IM's advanced features, such as Topic Pages, Recirculation by Topic, etc.
 - `ARTICLE_URL` in `data-post-url` attribute - The full Canonical URL of the page. This attribute is optional, and is used only if page's Canonical URL reference in the page's head section is erroneous.
 
 ```html
@@ -64,10 +64,10 @@ You will need to replace the following placeholders:
     data-post-id="POST_ID"></script>
 ```
 
-## Other Options
+## Other Implementaitons
+Spot.IM is actively working on additional documentation. Please contact us if you can not find necessary information online. 
 
 ### Standalone Conversation Widget
-
 To display a Conversation widget by itself, place the Conversation's `<script>` element in the location on the page where you want the widget to appear. You can find an implementation example [here](conversation-example.html).
 
 ```html
@@ -79,7 +79,6 @@ To display a Conversation widget by itself, place the Conversation's `<script>` 
 ```
 
 ### Dynamic Conversation Widget in PHP
-
 To display a Conversation widget in WP, utilizing the information that is already on the WP system, you can place the following Conversation's `<script>` element in the location on the page where you want the widget to appear.
 
 ```html

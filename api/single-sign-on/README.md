@@ -1,7 +1,5 @@
 
 # SSO (Single Sign On) with Spot.IM
-
-
 Single Sign On (SSO) enables the partner user to auto-login to Spot.IM when he's logged into the Partner's site.
 To accomplish this, the partner needs to let Spot.IM know which user is currently logged into his site, in a secure manner.
 Understanding the technical flow is the sole challenge of performing a successful SSO implementation.
