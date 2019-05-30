@@ -91,7 +91,6 @@ To display a Conversation widget in WP, utilizing the information that is alread
 ```
 
 ### Standalone Popular in the Community Widget
-
 To display a Popular in the Community widget by itself, place the following elements in the location on the page where you want the widget to appear. You can find an implementation example [here](popular-in-the-community-example.html).
 
 ```html
@@ -122,13 +121,11 @@ You can embed multiple Conversation widgets on a single page. For more informati
 You can display a separate widget showing the number of messages in a Conversation. For more information, see the [Message Count](../comments-count/README.md) documentation page.
 
 ## Integrations
-
 You can import comments from another comment platform into Spot.IM. If you are migrating from another platform, this lets your users continue their conversations in Spot.IM from the other platform.
 
 The import process is triggered by an _import hint_, which is a set of parameters added to a Conversation's `<script>` block. These parameters identify the article in the platform you are importing from. When the Conversation loads for the first time, the import hint triggers the Spot.IM backend service to import the article's comments from the previous platform. This process occurs only once for each article when the article's Conversation widget is first loaded.
 
 ### Disqus
-
 Importing comments from Disqus requires two additional attributes:
 
 - `data-disqus-url` - [`disqus_url` or `this.page.url`](https://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables#thispageurl) parameter in your Disqus integration code.
@@ -147,7 +144,6 @@ Add these parameters to the Conversation's `<script>` block on the article page.
 ```
 
 ### Facebook
-
 Importing comments from Facebook requires one additional attribute:
 
 - `data-facebook-url` - this is the canonical URL of the page you place the Conversation on.
@@ -164,7 +160,6 @@ Add this parameter to the Conversation's `<script>` block on the article page.
 ```
 
 ### Livefyre
-
 Importing Livefyre comments requires one additional attributes:
 
 - `data-livefyre-url` - this is the `articleId`, which uniquely identifies a Collection in your Livefyre account
