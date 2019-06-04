@@ -8,6 +8,3 @@ Community Pages are category pages mixed with the best of what social media offe
 3. Community Pages are unique because you allow users a fandom with your site's own personal point of view. While there may be other publishers offering category pages revolving the same topic, your own custom Community Page allows you to create a fandom with your site's OWN personal point of view. 
 
 Please contact your account manager if you are interested in creating Community Pages for your website.  
-
-## Common Questions
-Coming soon...
