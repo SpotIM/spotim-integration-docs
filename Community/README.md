@@ -1,5 +1,5 @@
 # Community Pages
-Community Pages are category pages mixed with the best of what social media offers. Many publishers have category pages that amalgate articles so you are able to read everything in one place. This is great for the user that wants to deep dive into a particular topic. Community Pages enhances that experience ten-fold. 
+Community Pages are category pages mixed with the best of what social media offers. Many publishers have category pages that amalgate articles so you are able to read everything in one place. This is great for the user that wants to deep dive into a particular topic. Community Pages takes this experience to the next level.
 
 1. Community Pages provide unique, custom widgets that allows the reader to interact with other readers. This interaction create online fandoms specific to the topic. You can deep dive into great content AND discuss what you are reading about with fellow fans.
 
