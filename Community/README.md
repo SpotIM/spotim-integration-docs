@@ -54,6 +54,32 @@ Once you are on the specific topic page in your host panel, scroll down to the t
 
 ### Article Recommendation Unit
 
+This widget promotes topic pages by recommending either related topics or trending topics across your whole site. When related topics are selected, the unit identifies the content of the article and promotes the most relevant topics to the article. With trendig topics, the unit recommends the most engaging topics over the past week. To get started, set the toggle to "Enabled".
+
+<p align="center">
+  <img width="460" height="auto" src="https://publisher-assets.spot.im/host-panel/in-article-recommendation@2x.png">
+</p>
+
+Similar to our conversation and popular in community widgets, you will need to place the following block of code where you want the article recommendation unit to load.
+
+```
+<div data-spotim-module="community-promo" data-spot-id="sp_8fvGl692" data-post-id="POST_ID" data-article-tags="TAGS"/><script async src="https://launcher.spot.im/spot/sp_8fvGl692" data-spotim-module="spotim-launcher"></script>
+```
+_Replace  "POST_ID"  with your ID of the page you want to see the unit on._ <br>
+_Replace  "TAGS"  with the article tags on your page._
+
+You have the option of choosing the number of topics and recommendation type:
+
+<p align="left">
+  <img width="460" height="auto" src="https://images.spot.im/image/upload/q_70,fl_lossy,dpr_3,h_315,w_500,c_limit/v200/9b414991fbc08afe6e7c5ac10e963357">
+</p>
+
+Lastly, you can edit title and subtitle:
+<p align="left">
+  <img width="460" height="auto" src="https://images.spot.im/image/upload/q_70,fl_lossy,dpr_3,h_189,w_500,c_limit/v200/fec9c80daf836eb54e97fd9c546e5c5c">
+</p>
+
+
 
 
 
