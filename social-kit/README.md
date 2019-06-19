@@ -120,6 +120,7 @@ You can embed multiple Conversation widgets on a single page. For more informati
 
 You can display a separate widget showing the number of messages in a Conversation. For more information, see the [Message Count](../comments-count/README.md) documentation page.
 
+
 ## Integrations
 You can import comments from another comment platform into Spot.IM. If you are migrating from another platform, this lets your users continue their conversations in Spot.IM from the other platform.
 
