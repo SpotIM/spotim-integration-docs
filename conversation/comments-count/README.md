@@ -1,6 +1,6 @@
-# Displaying the Number of Messages in a Conversation
+# Displaying the Number of Posts in a Conversation
 
-You can display the number of messages in a Conversation anywhere on your site.
+You can display the number of posts in a Conversation anywhere on your site.
 
 Place the following script on your page, replacing `SPOT_ID` with your Spot ID:
 
@@ -18,8 +18,8 @@ Then, place a `<div>` element where you want the count to appear and replace `PO
 ```
 Pay attention that the script element should appear only once on the page, and the div element should be duplicated per every count you want to present on your page.
 
-## Number of Messages on the Article's page
-If you wish to display the number of messages in a conversation on the same page as the conversation, the counter can get updated real time, by adding the attribute real-time="true".
+## Number of Posts on the Article's page
+If you wish to display the number of posts in a conversation on the same page as the conversation, the counter can get updated real time, by adding the attribute real-time="true".
 
 ```html
 <div class="spot-im-replies-count" data-post-id="POST_ID" real-time="true"></div>
