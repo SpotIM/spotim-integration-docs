@@ -3,7 +3,7 @@
 ## Background:
 Several of our partners use AMP to boost their traffic, we have a version of AMP conversation but we need the partners to add the relevant parameters to load the correct conversation using the [AMP for WP] (https://ampforwp.com/)
 
-## Important Note for Publishers That Already Have Spot.IM Amp Hardcoded onto Site
+## Important Note for Publishers That Already Have Spot.IM AMP Hardcoded onto Site
 In order for AMP for WP plugin to work correctly, you must fully  delete all spot.im amp code that may have been hard coded onto your site. This includes code in both the head and body section. If you have any questions on exactly what to delete, please contact your account manager.
 
 
