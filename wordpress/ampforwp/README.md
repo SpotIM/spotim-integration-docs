@@ -32,7 +32,7 @@ Add above script as shown and Save Changes. ![here](amp-plugin-settings.png)
 ### Manually add to a template:
 ![here](../amp-plugin/spotim-let-them-decide.png)
 
-When using Official AMP plugin and embed method set to `Let theme decide`, use the following code to display the comments on AMP powered pages and it must be inside the WordPress's  post loop.
+When using Official AMP plugin and embed method set to `Let theme decide`, add the following code to desired template on `wp-content/plugins/accelerated-mobile-pages/templates/accelerated-mobile-pages/templates/design-manager/{active-amp-theme}/`, it must be inside the WordPress's  post loop.
 ```php
 if ( method_exists( 'SpotIM_Frontend','display_amp_comments' ) ) {
     SpotIM_Frontend::display_comments();
@@ -42,14 +42,7 @@ if ( method_exists( 'SpotIM_Frontend','display_amp_comments' ) ) {
 
 ## Recirculation
 
-Recirculations works on AMP powered pages using every embed methods.
-
-
-| Recirculation Embed Method | Native Mode        | Transitive Mode    |
-|----------------------------|--------------------|--------------------|
-| Regular                    | :white_check_mark: | :white_check_mark: |
-| Inline-top                 | :white_check_mark: | :white_check_mark: |
-| Inline-bottom              | :white_check_mark: | :white_check_mark: |
+Recirculation works on AMP powered pages by default along with comments.
 
 
 ### Ads on AMP powered pages
