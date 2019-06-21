@@ -16,7 +16,7 @@ Comments works on AMP powered pages using every embed methods.
 ### Manually add to a template:
 ![here](spotim-let-them-decide.png)
 
-When using Official AMP plugin and embed method set to `Let theme decide`, use the following code to display the comments on AMP powered pages and it must be inside the WordPress's post loop.
+When using official AMP plugin  and embed method set to `Let theme decide`, add the following code to desired template on `wp-content/themes/twentyseventeen/`, it must be inside the WordPress's  post loop.
 ```php
 if ( method_exists( 'SpotIM_Frontend','display_amp_comments' ) ) {
     SpotIM_Frontend::display_comments();
@@ -25,7 +25,7 @@ if ( method_exists( 'SpotIM_Frontend','display_amp_comments' ) ) {
 
 ## Recirculation
 
-Recirculation works on AMP powered pages by default along with comments
+Recirculation works on AMP powered pages by default along with comments.
 
 ## Ads on AMP powered pages
 

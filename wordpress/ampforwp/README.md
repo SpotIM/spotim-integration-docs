@@ -32,7 +32,7 @@ Add above script as shown and Save Changes. ![here](amp-plugin-settings.png)
 ### Manually add to a template:
 ![here](../amp-plugin/spotim-let-them-decide.png)
 
-When using Official AMP plugin and embed method set to `Let theme decide`, add the following code to desired template on `wp-content/plugins/accelerated-mobile-pages/templates/accelerated-mobile-pages/templates/design-manager/{active-amp-theme}/`, it must be inside the WordPress's  post loop.
+When using ampforwp plugin and embed method set to `Let theme decide`, add the following code to desired template on `wp-content/plugins/accelerated-mobile-pages/templates/accelerated-mobile-pages/templates/design-manager/{active-amp-theme}/`, it must be inside the WordPress's  post loop.
 ```php
 if ( method_exists( 'SpotIM_Frontend','display_amp_comments' ) ) {
     SpotIM_Frontend::display_comments();
