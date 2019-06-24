@@ -1,17 +1,20 @@
 
-# Utilize AMP for WP plugin
-## Background:
-Several of our partners use AMP to boost their traffic, we have a version of AMP conversation but we need the partners to add the relevant parameters to load the correct conversation using the [AMP for WP] (https://ampforwp.com/)
+# AMP for WP plugin
+Our Conversation and Popular in the Community Widget is supported by the AMP for WP plugin. You must have our regular Spot.IM wordpress plugin installed before using AMP For WP plugin. In addition, AMP for WP must be updated to the latest version released. 
 
 ## Important Note for Publishers That Already Have Spot.IM AMP Hardcoded onto Site
-In order for AMP for WP plugin to work correctly, you must fully  delete all spot.im amp code that may have been hard coded onto your site. This includes code in both the head and body section. If you have any questions on exactly what to delete, please contact your account manager.
+In order for AMP for WP plugin to work correctly, you must fully  delete all Spot.IM amp code that may have been hard coded onto your site. This includes code in both the head and body section. If you have any questions on exactly what to delete, please contact your account manager.
+
+## Implementation
+Implementation instructions are dependent on how our plugin is embedded onto your site. You can find your settings by going to the Spot WP plugin (not amp for wp!) in your wordpress settings and clicking on the advanced tab. Then locate `Comments Embed Method`
+
+<img src="https://images.spot.im/image/upload/q_70,fl_lossy,dpr_3,c_limit/v200/f6b677f230452b558c1df45d96905cb4">
+<br><br>
 
 
-## Comments
+1. If the `Comments Embed Method` is set to `Insert After the Content` it will work without any other setup.
 
-If the `Comments Embed Method` is set to `Insert After the Content` it will work without any other setup.
-
-Add the following code in the theme’s functions.php file, if the embed method is set to `Replace WordPress Comments`. It will append it to post content but not replace the WordPress Comments, you've to manually disable the WordPress comments.
+2. If the `Comments Embed Method` is set to `Replace WordPress Comments`, there are two separate lines of code you need to add. First, add the following code in the theme’s functions.php file: 
 ```php
 if ( method_exists( 'SpotIM_Frontend','display_amp_comments' ) ) {
     add_action( 'ampforwp_after_post_content', function() {
@@ -19,17 +22,19 @@ if ( method_exists( 'SpotIM_Frontend','display_amp_comments' ) ) {
     }, 10 );
 }
 ```
-Publisher can update the hook and use it where they can.
 
-For embed methods `Comments Embed Method` and `Replace WordPress Comments` add below given script in the head to get it working.
+Next, add the given script in the head to get it working.
 ```html
 <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 ```
-It is required as The tag 'amp-iframe' requires including the 'amp-iframe' extension JavaScript.
 
-Add above script as shown and Save Changes. ![here](amp-plugin-settings.png)
+ ![here](amp-plugin-settings.png)
 
-### Manually add to a template:
+It will append our widget to post content but WordPress Comments will still need to be manually disabled.
+
+
+
+3. Manually add to a template:
 ![here](../amp-plugin/spotim-let-them-decide.png)
 
 When using ampforwp plugin and embed method set to `Let theme decide`, add the following code to desired template on `wp-content/plugins/accelerated-mobile-pages/templates/accelerated-mobile-pages/templates/design-manager/{active-amp-theme}/`, it must be inside the WordPress's  post loop.
