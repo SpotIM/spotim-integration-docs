@@ -55,7 +55,7 @@ Recirculation works on AMP powered pages by default along with comments.
 
 ### Ads on AMP powered pages
 
-To enable the Recirculation Ads for AMP powered pages, Go to Advance Tab on SpotIM Settings and set `Recirculation AMP Ad tag` to enable. Please note that ads must be turned on by your account manager first before they start populating.
+To enable the Recirculation Ads for AMP powered pages, go to the advanced tab in your Spot.IM plugin Settings (not wp for amp) and set `Recirculation AMP Ad tag` to enable. Please note that ads must be turned on by your account manager first before they start populating.
 ![RC Ads](../amp-plugin/rc-ads.png)
 
 
