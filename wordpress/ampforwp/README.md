@@ -40,7 +40,7 @@ It will append our widget to post content but WordPress Comments will still need
 #### 3. `Comments Embed Method` is set to `Let the theme decide`
 ![here](../amp-plugin/spotim-let-them-decide.png)
 
-When using ampforwp plugin and embed method set to `Let theme decide`, add the following code to desired template on `wp-content/plugins/accelerated-mobile-pages/templates/accelerated-mobile-pages/templates/design-manager/{active-amp-theme}/`, it must be inside the WordPress's  post loop.
+Add the following code to desired template on `wp-content/plugins/accelerated-mobile-pages/templates/accelerated-mobile-pages/templates/design-manager/{active-amp-theme}/`. It must be inside the WordPress's  post loop.
 ```php
 if ( method_exists( 'SpotIM_Frontend','display_amp_comments' ) ) {
     SpotIM_Frontend::display_comments();
