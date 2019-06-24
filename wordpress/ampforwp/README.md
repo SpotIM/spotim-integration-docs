@@ -12,9 +12,11 @@ Implementation instructions are dependent on how our plugin is embedded onto you
 <br><br>
 
 
-1. If the `Comments Embed Method` is set to `Insert After the Content` it will work without any other setup.
+#### 1. `Comments Embed Method` is set to `Insert After the Content` 
+No setup is needed.
 
-2. If the `Comments Embed Method` is set to `Replace WordPress Comments`, there are two separate lines of code you need to add. First, add the following code in the theme’s functions.php file: 
+#### 2. `Comments Embed Method` is set to `Replace WordPress Comments` 
+There are two separate lines of code you need to add. First, add the following code in the theme’s functions.php file: 
 ```php
 if ( method_exists( 'SpotIM_Frontend','display_amp_comments' ) ) {
     add_action( 'ampforwp_after_post_content', function() {
@@ -23,7 +25,8 @@ if ( method_exists( 'SpotIM_Frontend','display_amp_comments' ) ) {
 }
 ```
 
-Next, add the given script in the head to get it working.
+Next, add the given script in the head to get it working. You can find this setting in the advanced settings tab of the AMP for WP plugin.
+
 ```html
 <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 ```
@@ -34,7 +37,7 @@ It will append our widget to post content but WordPress Comments will still need
 
 
 
-3. Manually add to a template:
+#### 3. `Comments Embed Method` is set to `Let the theme decide`
 ![here](../amp-plugin/spotim-let-them-decide.png)
 
 When using ampforwp plugin and embed method set to `Let theme decide`, add the following code to desired template on `wp-content/plugins/accelerated-mobile-pages/templates/accelerated-mobile-pages/templates/design-manager/{active-amp-theme}/`, it must be inside the WordPress's  post loop.
@@ -52,8 +55,7 @@ Recirculation works on AMP powered pages by default along with comments.
 
 ### Ads on AMP powered pages
 
-To enable the Recirculation Ads for AMP powered pages, Go to Advance Tab on SpotIM Settings and set `Recirculation AMP Ad tag` to enable.
-
+To enable the Recirculation Ads for AMP powered pages, Go to Advance Tab on SpotIM Settings and set `Recirculation AMP Ad tag` to enable. Please note that ads must be turned on by your account manager first before they start populating.
 ![RC Ads](../amp-plugin/rc-ads.png)
 
-It will display the AMP Ads under the Recirculation.
+
