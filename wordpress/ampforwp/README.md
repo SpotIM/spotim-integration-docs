@@ -1,16 +1,14 @@
-
-# AMP for WP plugin
-Our Conversation and Popular in the Community Widget is supported by the AMP for WP plugin. You must have our regular Spot.IM wordpress plugin installed before using AMP For WP plugin. In addition, AMP for WP must be updated to the latest version released. 
+# AMP for WP Plugin
+Our Conversation and Popular in the Community Widget is supported by the AMP for WP plugin. You must have the most recent Spot.IM WordPress plugin installed before using the AMP For WP plugin. In addition, AMP for WP must be updated to the latest version released. 
 
 ## Important Note for Publishers That Already Have Spot.IM AMP Hardcoded onto Site
-In order for AMP for WP plugin to work correctly, you must fully  delete all Spot.IM amp code that may have been hard coded onto your site. This includes code in both the head and body section. If you have any questions on exactly what to delete, please contact your account manager.
+In order for AMP for WP plugin to work correctly, you must fully  delete all Spot.IM amp code previously hard coded onto your site. This includes code in both the head and body section. If you have any questions on exactly which code to delete, please contact your account manager.
 
 ## Implementation
-Implementation instructions are dependent on how our plugin is embedded onto your site. You can find your settings by going to the Spot WP plugin (not amp for wp!) in your wordpress settings and clicking on the advanced tab. Then locate `Comments Embed Method`
+Implementation instructions are dependent on how our plugin is embedded onto your site. You can find your settings by going to the Spot.IM WP plugin (not Amp for WP!) in your WordPress' settings and clicking on the advanced tab. Then locate `Comments Embed Method`
 
 <img src="https://images.spot.im/image/upload/q_70,fl_lossy,dpr_3,c_limit/v200/f6b677f230452b558c1df45d96905cb4">
 <br><br>
-
 
 #### 1. `Comments Embed Method` is set to `Insert After the Content` 
 No setup is needed.
@@ -36,11 +34,10 @@ Next, add the given script in the head to get it working. You can find this sett
 It will append our widget to post content but WordPress Comments will still need to be manually disabled.
 
 
-
 #### 3. `Comments Embed Method` is set to `Let the theme decide`
 ![here](../amp-plugin/spotim-let-them-decide.png)
 
-Add the following code to desired template on `wp-content/plugins/accelerated-mobile-pages/templates/accelerated-mobile-pages/templates/design-manager/{active-amp-theme}/`. It must be inside the WordPress's  post loop.
+Add the following code to desired template on `wp-content/plugins/accelerated-mobile-pages/templates/accelerated-mobile-pages/templates/design-manager/{active-amp-theme}/`. It must be inside the WordPress' post loop.
 ```php
 if ( method_exists( 'SpotIM_Frontend','display_amp_comments' ) ) {
     SpotIM_Frontend::display_comments();
@@ -49,13 +46,8 @@ if ( method_exists( 'SpotIM_Frontend','display_amp_comments' ) ) {
 
 
 ## Recirculation
-
 Recirculation works on AMP powered pages by default along with comments.
 
-
 ### Ads on AMP powered pages
-
-To enable the Recirculation Ads for AMP powered pages, go to the advanced tab in your Spot.IM plugin Settings (not wp for amp) and set `Recirculation AMP Ad tag` to enable. Please note that ads must be turned on by your account manager first before they start populating.
+To enable the Recirculation Ads for AMP powered pages, go to the advanced tab in your Spot.IM plugin Settings (not AMP for WP) and enable `Recirculation AMP Ad tag`. Please note that ads must be turned on by your account manager inorder to populate.
 ![RC Ads](../amp-plugin/rc-ads.png)
-
-
