@@ -128,7 +128,11 @@ The user has logged in to the system.
     socialNetworks: [],
     username
   }
-}```
+}
+```
+
+##### `spot-im-user-logout`
+The user initialized a log out process.
 
 ##### `spot-im-user-up-vote-click`
 The user has clicked to up vote a comment.
