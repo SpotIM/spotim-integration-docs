@@ -139,6 +139,23 @@ ACCESS_TOKEN - The same SSO secret token obtained from Spot.IM
 The partner Backend should call Spot.IM Backend, when an account is deleted from the partner's site.
 Comments by the deleted user will be annonimized, meaning, the comments will remain but will be linked to a random guest user.
 
+## Backend - getting existing user details
+
+ The /v1/user/:primary_key endpoint should be used when you'd like to get the SpotIM user data of an existing SSO user.
+
+```
+GET https://www.spot.im/api/sso/v1/user/:primary_key
+Header: x-spotim-sso-access-token: ACCESS_TOKEN
+```
+
+The required parameter is the users's primary key used in the register-user endpoint to register/login the user to SpotIM.
+
+This must be done as a backend to backend call as to ensure the security of your access token (partner Backend should call Spot.IM Backend).
+
+ **Example**
+
+https://www.spot.im/api/sso/v1/user/3169059
+Header: x-spotim-sso-access-token: ACCESS_TOKEN
 
 ## Integration for "Require Login" moderation policy
 
