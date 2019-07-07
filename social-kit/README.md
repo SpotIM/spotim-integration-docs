@@ -29,14 +29,12 @@ Additionally, your article pages will need to contain [OG Tags](https://blog.kis
 
 ### Best Practices for Creating Post IDs
 A Post ID can be any alphanumeric value that uniquely identifies a page. Post IDs can contain the following characters:
-
 - Letters
 - Numbers
 - Underscores
 - Dashes
 
 Post IDs should be short. A common approach is to use the page's title or content. For example:
-
 - `article_1`
 - `article-title`
 - `article-short-link`
@@ -113,11 +111,9 @@ Replace marked parameters:
 SPOT_ID - Your Spot.ID, ask your account manager for a Spot.ID
 
 ### Multiple Conversation Instances
-
 You can embed multiple Conversation widgets on a single page. For more information, see the [Multiple Conversation Instances](../multiple-conversation-instances/README.md) documentation page.
 
 ### Displaying the Number of Messages in a Conversation
-
 You can display a separate widget showing the number of messages in a Conversation. For more information, see the [Message Count](../conversation/comments-count/README.md) documentation page.
 
 
