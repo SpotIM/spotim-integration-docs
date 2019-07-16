@@ -1,10 +1,8 @@
 # Client-Side events
-For different events occurring in our products we allow the publishers to add event listeners on client side.
+Publishers can add event listeners (on client side) to aid in tracking engagement or for other functionality. Spot.IM has event listeners for multiple widgets. 
 
 ## Event Listener Registration
-For example, `spot-im-current-user-sent-message` event will trigger when a user sends a comment we has written.
-
-Registration is done the following way:
+Example: `spot-im-current-user-sent-message` can be added to a script tag to trigger an event when a user sends a comment they have written. In this example below, event.detail will be logged to the console after the event is fired. 
 
 ```javascript
 document.addEventListener('spot-im-current-user-sent-message', function(event) {
@@ -13,12 +11,11 @@ document.addEventListener('spot-im-current-user-sent-message', function(event) {
 });
 ```
 
-**Please note:** any events occurred before the listener registration will be lost.
-Make sure you register for the events as early as possible, before Spot.IM loads on your page.
+**Please note:** It is advised that the <script> element is kept within the header. Any events that occurr before the listener registration will be lost. Make sure events are registered as early as possible, and before Spot.IM loads. 
+    Multiple events can be used within a single script tag. 
 
 
-## Events Reference
-
+## Conversation Events References
 ##### `spot-im-api-ready`
 Notifies that the public API, such as SSO, is ready.
 
@@ -85,36 +82,6 @@ The user has clicked on the "Show More Replies" button. Event details include th
 ##### `spot-im-open-user-profile`
 The user has clicked on the "View Profile" button of a specific user. Event details include the User ID.
 
-##### `spot-im-realtime-new-message`
-A new message appeared in the Conversation or the Live Blog in real-time.
-`event.detail`:
-```javascript
-{
-  source: 'live-blog' [or:] 'conversation',
-
-  // eventCode and postId are mutually exclusive  
-  // if source="live-blog":
-  eventCode: '...live blog eventCode...',
-  // if source="conversation":
-  postId: '...conversation postId...',
-
-  fromUser: {
-    // common to live-blog and conversation
-    id: '...Spot.IM user ID',
-    username: '...username...',
-    displayName: '...display name (can be null)...',
-
-    // only for source="live-blog":
-   isReporter: true [or:] false
-  },
-  message: {
-    type: 'comment' [or] 'reply',
-    time: 'JS timestamp...'
-  }
-}
-```
-
-
 ##### `spot-im-login-start`
 The user initialized a log in process.
 
@@ -142,16 +109,6 @@ The user has clicked to down vote a comment.
 
 ##### `spot-im-user-notifications-click`
 The user has clicked on the notifications icon (the bell icon).
-
-##### `spot-im-user-click`
-The user has clicked on any object on the page with the a "spot-im-class" attribute.
-`event.detail`:
-```javascript
-{
-  elementTop,
-  spotImClass
-}
-```
 
 ##### `spot-im-frame-entity-load`
 The user has clicked on a Twitter or Instagram "Show" button in a comment (this occurs on mobile layout).
@@ -184,6 +141,66 @@ The user opened the user profile screen.
   userId
 }
 ```
+
+## Conversation and Live Blog Events References
+##### `spot-im-realtime-new-message`
+A new message appeared in the Conversation or the Live Blog in real-time.
+`event.detail`:
+```javascript
+{
+  source: 'live-blog' [or:] 'conversation',
+
+  // eventCode and postId are mutually exclusive  
+  // if source="live-blog":
+  eventCode: '...live blog eventCode...',
+  // if source="conversation":
+  postId: '...conversation postId...',
+
+  fromUser: {
+    // common to live-blog and conversation
+    id: '...Spot.IM user ID',
+    username: '...username...',
+    displayName: '...display name (can be null)...',
+
+    // only for source="live-blog":
+   isReporter: true [or:] false
+  },
+  message: {
+    type: 'comment' [or] 'reply',
+    time: 'JS timestamp...'
+  }
+}
+```
+
+##### `spot-im-user-click`
+The user has clicked on any object on the page with the a "spot-im-class" attribute.
+`event.detail`:
+```javascript
+{
+  elementTop,
+  spotImClass
+}
+```
+
+
+## Popular-in-the-Community
+Spot.IM has added Javascript listeners to the Popular-in-the-Community Widget.
+
+##### `spot-im-recirculation-item-clicked`
+Recirculation item click
+
+##### `spot-im-recirculation-left-clicked`
+Left navigation arrow click
+
+##### `spot-im-recirculation-right-clicked`
+Right navigation arrow click
+
+##### `spot-im-recirculation-loaded`
+Recirculation loaded
+
+##### `spot-im-recirculation-viewed`
+Recirculation viewed 
+
 
 ## Recipes
 
