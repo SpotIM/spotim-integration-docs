@@ -1,8 +1,7 @@
 # Before You Begin
-Know your site's content, brand and audience before picking Spot.IM widgets. This can guide whether you need a live blog for covering developing stories, anonymous commenting for increased user privacy, extra moderation for taboo topics and more.
+Know your site's content, brand and audience before implementing Spot.IM widgets. These factors guide whether you need a live blog for covering developing stories in real time, anonymous commenting for increased user privacy, extra moderation for taboo topics and much more.
 
-Before using Spot.IM you will need your Spot.IM `Spot ID`. This is a personal identification for your site or sites. Each Spot ID has a corresponding Staging Spot ID for testing. 
-Each article displaying Social Kit - Conversation and/or Popular-in-the-Community - will also require a `Post ID`. 
+Before using Spot.IM you will need your Spot.IM `Spot_ID`. This is a personal identification for your site or sites. A Spot_ID may have a corresponding Staging Spot_ID for testing in a UAT environment. After receiving your Spot_ID, you will create a `Post_ID` for each article displaying Spot.IM's Conversation and/or Popular-in-the-Community Widgets. Post_ID is used to identify which post is being referenced, so conversations do not get mixed up.  
 
 
 # Login Flow
@@ -13,7 +12,7 @@ Publishers can choose between three unique login systems. Each login system prov
 
 
 # Silo and Non-Silo Spots
-Publishers have a choice to create their own network or use the Spot.IM community network. Joining the Spot Network allows users to stay logged in between a large, growing network of sites. 
+Publishers have a choice to create their own network or use the Spot.IM community network. Joining the Spotim Network allows users to stay logged in between a large, growing network of sites.
 
 
 # Best Practices (General)
