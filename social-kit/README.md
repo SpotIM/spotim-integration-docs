@@ -116,4 +116,7 @@ You can embed multiple Conversation widgets on a single page. For more informati
 ### Displaying the Number of Messages in a Conversation
 You can display a separate widget showing the number of messages in a Conversation. For more information, see the [Message Count](../conversation/comments-count/README.md) documentation page.
 
+### Importing Comments from Other Platforms
+Our conversation widget offers the ability to import comments from other platforms. For more information, see the [Import](../imports/README.md) documentation page.
+
 
