@@ -18,9 +18,9 @@ If you are using WordPress, please see the [WordPress documentation page](../wor
     - [Standalone Side Rail Popular in the Community Widget](#standalone-side-rail-popular-in-the-community-widget)
     - [Multiple Conversation Instances](#multiple-conversation-instances)
     - [Displaying the Number of Messages in a Conversation](#displaying-the-number-of-messages-in-a-conversation)
-  - [Integrations](#integrations)
-    - [Disqus](#disqus)
-    - [Facebook](#facebook)
+    - [Importing Comments from Other Platforms](#importing-comments-from-other-platforms)
+
+  
 
 ## Before You Begin
 Before using the Spot.IM Social Kit, you will need your Spot.IM `Spot ID`. You will also need to create a `Post ID` for each article or page that you want to display the Social Kit on. You can use any alphanumeric value as a `Post ID`, but it must be unique to each page. See the following section for [best practices for creating Post IDs](#best-practices-for-creating-post-ids).
