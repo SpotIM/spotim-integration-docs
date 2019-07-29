@@ -54,7 +54,7 @@ If you do not use any of the commenting platforms listed above, there may be an 
 * content
 
 #### Nice To Have Columns for User Data
-* user_name - without this it will be generated as a Guest
+* user_name - without this it will be generated as a Guest. This field can not contain special characters (Ex: "<" or ">"), but may contain foreign characters. 
 * display_name - Without this it will be generated as a Guest
 * image_url - Without this it will be a random Spot.IM avatar
 * email - Without this it will be empty, and we will be unable to match users to their comments if there is no SSO process that matches user ids
