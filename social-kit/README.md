@@ -44,7 +44,7 @@ The Social Kit standard implementation adds two widgets to each page: Real-Time 
 
 ![Image of a standard implementation](social-kit.png)
 
-To add these widgets to your page, place the following elements in the location on the page where you want the widgets to appear. You can place these widgets anywhere, although we recommend placing them just below the page's main content.
+To add these widgets to your page, place the following elements in the location on the page where you want the widgets to appear. You can place the elements anywhere, although we recommend placing them just below the page's main content. Please keep the <script> elements together.
 
 You will need to replace the following placeholders:
 - `SPOT_ID` - Your Spot ID. **Notice** that the `SPOT_ID` appears in 3 places.
@@ -61,6 +61,8 @@ You will need to replace the following placeholders:
     data-article-tags="ARTICLE_TOPIC1, ARTICLE_TOPIC2"    
     data-post-id="POST_ID"></script>
 ```
+
+Note: If you are injecting these elements using a script, it is advised that they are all injected at the same time. Seperating the <script> elements may cause issues with widgets rendering. 
 
 ## Other Implementaitons
 Spot.IM is actively working on additional documentation. Please contact us if you can not find necessary information online. 
