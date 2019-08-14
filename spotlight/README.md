@@ -20,14 +20,22 @@ Yes! Currently, there are two types of Commmunity Spotlights offered, email capt
 ### Implementation
 Community Spotlight is extremely easy to implement. Implementation is dependent on whether you have our conversation widget already active on the page. Please place the appropriate code into where you would like Community Spotlight to load.
 
-*If Conversation Widget is already on page*
+*If Conversation Widget is NOT on page*
 ```html
 <script async data-spotim-module="spotim-launcher" src="https://launcher.spot.im/spot/INSERT SPOT_ID HERE"></script>
 ```
 <br>
 
-*If Conversation Widget is NOT on page*
+*If Conversation Widget is on page*
 
 ```html
 <div data-conversation-spotlight></div>
+```
+
+#### Siderail Implementation
+We offer a siderail implementation of spotlight as long as your siderail is 300px or less. Please place the following line of code where you would like spotlight to load in your siderail. Please note, we currently do not support having regular spotlight and siderail spotlight on the same article.
+
+```
+<script async data-spotim-module="spotim-launcher" src="https://launcher.spot.im/spot/INSERT SPOT_ID HERE"></script>
+<div data-conversation-spotlight data-spotlight-sidebar></div>
 ```
