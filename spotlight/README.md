@@ -33,7 +33,7 @@ Community Spotlight is extremely easy to implement. Implementation is dependent 
 ```
 
 #### Siderail Implementation
-We offer a siderail implementation of spotlight as long as your siderail is 300px or less. Please place the following line of code where you would like spotlight to load in your siderail. Please note, we currently do not support having regular spotlight and siderail spotlight on the same article.
+We offer a siderail implementation of spotlight as long as your siderail is 300px or less. Place the following line of code where you would like spotlight to load in your siderail. Please note, we currently do not support having regular spotlight and siderail spotlight on the same article.
 
 ```
 <script async data-spotim-module="spotim-launcher" src="https://launcher.spot.im/spot/INSERT SPOT_ID HERE"></script>
