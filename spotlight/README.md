@@ -18,7 +18,7 @@ No. The same conditions apply.
 Yes! Currently, there are two types of Commmunity Spotlights offered, email capture and comment driver. Email capture enables you to collect email addresses of users. Comment driver allows a site to drive awareness of our conversation widget by automaticaly scrolling to the conversation widget when a user clicks on the Community Spotlight widget. You can also customize Community Spotlight logo, text, and color. 
 
 ### Implementation
-Community Spotlight is extremely easy to implement. Implementation is dependent on whether you have our conversation widget already active on the page. Please place the appropriate code into where you would like Community Spotlight to load.
+Community Spotlight is extremely easy to implement. Implementation is dependent on whether you have our conversation widget already active on the page. First contact your publisher success manager to have our spotlight set up in our backend. Next, place the appropriate code where you would like community spotlight to load.
 
 *If Conversation Widget is NOT on page*
 ```html
