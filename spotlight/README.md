@@ -22,7 +22,7 @@ Community Spotlight is extremely easy to implement. Implementation is dependent 
 
 *If Conversation Widget is NOT on page*
 ```html
-<script async data-spotim-module="spotim-launcher" src="https://launcher.spot.im/spot/INSERT SPOT_ID HERE"></script>
+<script async data-spotim-module="spotim-launcher" src="https://launcher.spot.im/spot/{{SPOT ID}}"></script>
 ```
 <br>
 
@@ -36,6 +36,6 @@ Community Spotlight is extremely easy to implement. Implementation is dependent 
 We offer a siderail implementation of spotlight as long as your siderail is 300px or less. Place the following line of code where you would like spotlight to load in your siderail. Please note, we currently do not support having regular spotlight and siderail spotlight on the same article.
 
 ```
-<script async data-spotim-module="spotim-launcher" src="https://launcher.spot.im/spot/INSERT SPOT_ID HERE"></script>
+<script async data-spotim-module="spotim-launcher" src="https://launcher.spot.im/spot/{{SPOT ID}}"></script>
 <div data-conversation-spotlight data-spotlight-sidebar></div>
 ```
