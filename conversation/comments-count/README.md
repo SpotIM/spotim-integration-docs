@@ -11,9 +11,10 @@ Place the following script on your page, replacing `SPOT_ID` with your Spot ID:
     data-spotim-module="spotim-launcher"></script>
 ```
 
-The above script is necessary for presenting the comment count. It must be included with either variation of <div> elements below.
+The above script is necessary for presenting the comment count. It must be included with either variation of `<div>` elements below.
 
 Then, place a `<div>` element where you want the count to appear and replace `POST_ID` with the Post ID of the page you wish to display the count for. This should match the Post ID used in the page's Conversation.
+
 Note: The `<div>` elements can be substituted with another, such as `<span>`.
 
 ## Number of Posts on Any Page
