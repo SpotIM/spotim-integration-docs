@@ -52,11 +52,13 @@ _**Note:** If you have an existing `<style amp-custom>` tag, append the followin
 <amp-iframe width="375" height="815" resizable
     sandbox="allow-scripts allow-same-origin allow-popups allow-top-navigation"
     layout="responsive" frameborder="0" 
-    src="https://amp.spot.im/production.html?spot_im_highlight_immediate=true&spotId=SPOT_ID&postId=POST_ID">
+    src="https://amp.spot.im/production.html?spot_im_highlight_immediate=true&spotId=SPOT_ID&postId=POST_ID&redirect=true">
     <amp-img placeholder height="815" layout="fill" src="//amp.spot.im/loader.png"></amp-img>
     <div overflow class="spot-im-amp-overflow" tabindex="0" role="button" aria-label="Read more">Load more...</div>
 </amp-iframe>
 ```
+- It is possible to disable the inpage redirect when clicking the conversation by removing the '&redirect=true' query param from the url.
+
 ## Using AMP for Live Blog
 Spot.IM AMP implemented by an amp-iframe that wraps regular Spot.IM implementation.
 
