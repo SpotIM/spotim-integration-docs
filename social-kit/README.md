@@ -25,7 +25,7 @@ If you are using WordPress, please see the [WordPress documentation page](../wor
 ## Before You Begin
 Before using the Spot.IM Social Kit, you will need your Spot.IM `Spot ID`. You will also need to create a `Post ID` for each article or page that you want to display the Social Kit on. You can use any alphanumeric value as a `Post ID`, but it must be unique to each page. See the following section for [best practices for creating Post IDs](#best-practices-for-creating-post-ids).
 
-Additionally, your article pages will need to contain [OG Tags](https://blog.kissmetrics.com/open-graph-meta-tags/) tags. OG tags are meta tags that define the title, type, preview image, and other attributes of each article on your website. Each page must contain these tags in order for the Popular in the Community to generate previews of the article.
+Additionally, your article pages should contain [OG Tags](https://blog.kissmetrics.com/open-graph-meta-tags/) tags. OG tags are meta tags that define the title, type, preview image, and other attributes of each article on your website. Each page must contain these tags in order for the Popular in the Community to generate previews of the article.
 
 ### Best Practices for Creating Post IDs
 A Post ID can be any alphanumeric value that uniquely identifies a page. Post IDs can contain the following characters:
@@ -44,7 +44,7 @@ The Social Kit standard implementation adds two widgets to each page: Real-Time 
 
 ![Image of a standard implementation](social-kit.png)
 
-To add these widgets to your page, place the following elements in the location on the page where you want the widgets to appear. You can place the elements anywhere, although we recommend placing them just below the page's main content. Please keep the <script> elements together.
+To add these widgets to your page, place the following elements in the location on the page where you want the widgets to appear. You can place the <div> element anywhere. We recommend placing the two <script> tags just below the page's main content. **Please keep the <script> elements together. You may experience issues loading widgets if the <script> tags are seperate.**
 
 You will need to replace the following placeholders:
 - `SPOT_ID` - Your Spot ID. **Notice** that the `SPOT_ID` appears in 3 places.
