@@ -24,7 +24,7 @@ On the page, make sure you have a div element with the following general structu
 <div id="comments-wrapper" data-spot-id="SPOT_ID"
     data-post-url="ARTICLE_URL"
     data-article-tags="ARTICLE_TOPIC1, ARTICLE_TOPIC2"    
-    data-post-id="POST_ID"></script>
+    data-post-id="POST_ID"></div>
 ```
 In order to load the conversation, use the following command:
 
