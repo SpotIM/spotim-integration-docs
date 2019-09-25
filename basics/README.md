@@ -1,7 +1,12 @@
 # Before You Begin
 Know your site's content, brand and audience before implementing Spot.IM widgets. These factors guide whether you need a live blog for covering developing stories in real time, anonymous commenting for increased user privacy, extra moderation for taboo topics and much more.
 
-Before using Spot.IM you will need your Spot.IM `Spot_ID`. This is a personal identification for your site or sites. A Spot_ID may have a corresponding Staging Spot_ID for testing in a UAT environment. After receiving your Spot_ID, you will create a `Post_ID` for each article displaying Spot.IM's Conversation and/or Popular-in-the-Community Widgets. Post_ID is used to identify which post is being referenced, so conversations do not get mixed up.  
+Before using Spot.IM you will need your Spot.IM `Spot_ID`. This is a personal identification for your site or sites. A Spot_ID may have a corresponding Staging Spot_ID for testing in a UAT environment. After receiving your Spot_ID, you will create a `Post_ID` for each article displaying Spot.IM's Conversation and/or Popular-in-the-Community Widgets. Post_ID is used to identify which post is being referenced, so conversations do not get mixed up.
+
+## Post_ID Notes
+Do not use unique characters in any Post_ID.
+**Do not use websites in any Post_ID.**
+Remember, Post IDs are identifiers. If you change a Post ID, a different conversation will be pulled up. 
 
 
 # Login Flow
