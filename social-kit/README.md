@@ -64,7 +64,7 @@ You will need to replace the following placeholders:
 
 Note: If you are injecting these elements using a script, it is advised that they are all injected at the same time. Seperating the <script> elements may cause issues with widgets rendering. 
 
-## Other Implementaitons
+## Other Implementations
 Spot.IM is actively working on additional documentation. Please contact us if you can not find necessary information online. 
 
 ### Standalone Conversation Widget
