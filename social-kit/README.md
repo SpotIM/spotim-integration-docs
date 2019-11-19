@@ -44,7 +44,7 @@ The Social Kit standard implementation adds two widgets to each page: Real-Time 
 
 ![Image of a standard implementation](social-kit.png)
 
-To add these widgets to your page, place the following elements in the location on the page where you want the widgets to appear. You can place the <div> element anywhere. We recommend placing the two <script> tags just below the page's main content. **Please keep the <script> elements together. You may experience issues loading widgets if the <script> tags are seperate.**
+To add these widgets to your page, place the following element in the location on the page where you want the widgets to appear. Please note that our Popular in the Community Widget can only be turned on by contacting your partner success manager. Its default location is above conversation. 
 
 You will need to replace the following placeholders:
 - `SPOT_ID` - Your Spot ID. **Notice** that the `SPOT_ID` appears in 3 places.
@@ -53,16 +53,12 @@ You will need to replace the following placeholders:
 - `ARTICLE_URL` in `data-post-url` attribute - The full Canonical URL of the page. This attribute is optional, and is used only if page's Canonical URL reference in the page's head section is erroneous.
 
 ```html
-<!-- <div data-spotim-module="recirculation" data-spot-id="SPOT_ID"></div>
-<script async src="https://recirculation.spot.im/spot/SPOT_ID"></script> -->
 <script async src="https://launcher.spot.im/spot/SPOT_ID"
     data-spotim-module="spotim-launcher"
     data-post-url="ARTICLE_URL"
     data-article-tags="ARTICLE_TOPIC1, ARTICLE_TOPIC2"    
     data-post-id="POST_ID"></script>
 ```
-
-Note: If you are injecting these elements using a script, it is advised that they are all injected at the same time. Seperating the <script> elements may cause issues with widgets rendering. 
 
 ## Other Implementations
 Spot.IM is actively working on additional documentation. Please contact us if you can not find necessary information online. 
