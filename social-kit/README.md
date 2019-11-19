@@ -86,7 +86,14 @@ To display a Conversation widget in WP, utilizing the information that is alread
     data-post-id="<?php echo get_the_ID(); ?>"></script>
 ```
 
+### Importing Comments from Other Platforms
+Our conversation widget offers the ability to import comments from other platforms. For more information, see the [Import](../imports/readme.md) documentation page.
+
+## Popular in the Community 1.0 Widgets
+*Please note that this functionality is only available for Popular in the Community 1.0. We are working on expanding our capabilities for Popular in the Community 2.0.* <br>
+
 ### Standalone Popular in the Community Widget
+
 To display a Popular in the Community widget by itself, place the following elements in the location on the page where you want the widget to appear. You can find an implementation example [here](popular-in-the-community-example.html).
 
 ```html
@@ -114,7 +121,6 @@ You can embed multiple Conversation widgets on a single page. For more informati
 ### Displaying the Number of Messages in a Conversation
 You can display a separate widget showing the number of messages in a Conversation. For more information, see the [Message Count](../conversation/comments-count/README.md) documentation page.
 
-### Importing Comments from Other Platforms
-Our conversation widget offers the ability to import comments from other platforms. For more information, see the [Import](../imports/readme.md) documentation page.
+
 
 
