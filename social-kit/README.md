@@ -53,8 +53,8 @@ You will need to replace the following placeholders:
 - `ARTICLE_URL` in `data-post-url` attribute - The full Canonical URL of the page. This attribute is optional, and is used only if page's Canonical URL reference in the page's head section is erroneous.
 
 ```html
-<div data-spotim-module="recirculation" data-spot-id="SPOT_ID"></div>
-<script async src="https://recirculation.spot.im/spot/SPOT_ID"></script>
+<!-- <div data-spotim-module="recirculation" data-spot-id="SPOT_ID"></div>
+<script async src="https://recirculation.spot.im/spot/SPOT_ID"></script> -->
 <script async src="https://launcher.spot.im/spot/SPOT_ID"
     data-spotim-module="spotim-launcher"
     data-post-url="ARTICLE_URL"
