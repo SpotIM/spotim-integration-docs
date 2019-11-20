@@ -42,12 +42,14 @@ Importing Livefyre comments requires one additional attributes:
 
 - `data-livefyre-url` - this is the `articleId`, which uniquely identifies a Collection in your Livefyre account
 
+```html
 <script async src="https://launcher.spot.im/spot/SPOT_ID"
     data-spotim-module="spotim-launcher"
     data-post-id="POST_ID"
     data-article-tags="ARTICLE_TOPIC1, ARTICLE_TOPIC2"
     data-post-url="ARTICLE_URL"
     data-livefyre-url="ARTICLE_ID"></script>
+```
 
 ### CSV Import
 If you do not use any of the commenting platforms listed above, there may be an option to manually import comments though a CSV file. The following sections list requirements and options for CSV imports.
