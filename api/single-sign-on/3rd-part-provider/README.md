@@ -69,3 +69,22 @@ document.addEventListener('spot-im-login-start', function(event) {
     // trigger your login flow here
 });
 ```
+### Piano Integration
+In order to integrate Piano with Spot.IM, Spot.IM first needs to validate that the piano integration works. Afterwords, we will attach a configuration to the Spot ID.
+
+Configuration Validation is done to ensure that all the details are working properly and that the provider api returns the necessary data that we need in order to successfully run SSO. Unlike normal SSO integrations, SSO by provider is entirely controlled by Spot.IM. The steps below detail the process
+
+1. Obtain all of the necessary configuration details, along with a sample token
+2. One of our backend devs runs the exact function that runs in production, just to validate that we get the user details correctly
+3. If everything runs correctly, Spot.IM will set the configuration and publisher can continue their SSO implementation. Otherwise, Spot.IM will determine if the issue lies in the configuration or something else. 
+
+#### Data That Needs to Be Provided
+* App Id
+* Api Token
+* Private Key
+* Public Key (JWT Shared Secret / JWT Verification Shared Secret / JWT Encryption Key) - Used to in order to decode and validate the JWT token that the publisher passes to Spot.IM so we can securely extract the UID and query the Piano API. Please see the following links for additional information.
+  * https://docs.piano.io/piano-id-overview/#sharedsecret
+  * https://docs.piano.io/how-to-integrate-piano-id-with-commenting-apps?paragraphId=af369fbee39ad11
+
+* User Token 
+  * Can be found here: https://docs.piano.io/how-to-integrate-piano-id-with-commenting-apps/
