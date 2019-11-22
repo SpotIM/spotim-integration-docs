@@ -110,3 +110,23 @@ From the account manager you will recieve two html files:
 The file with the implementation code to be pasted into the Body of the page has the conversation AMP implemantation code presented above, with your `SPOT_ID` already configured - https://github.com/SpotIM/spotim-integration-docs/tree/master/google-amp#using-amp-for-conversation. Make sure to replace the `POST_ID` parameter with your own value.
 
 _**Note:** By default, this code will present Conversation below Popular in the Community Widget. If you prefer differently, make sure to ask your Account Manager for this adjustment. 
+
+## Amp for SSO
+Currently, we do not support AMP for SSO. However, we have an option to redirect to the mobile, non-amp version of the article page. 
+
+###Implementation Instructions
+1. Search for the source code of the conversation iframe in the amp code provided. The easiest way to locate this is to search for "postId" and it should bring up code that looks like this:
+<img src="https://s3.amazonaws.com/www.spotim.name/rich/amp_image_example.png">
+
+2. The query parameters of the source will need to be modified. Listed below are the query parameters that are required
+    * spot_im_highlight_immediate=true
+    * spotId=sp_SampleSpotId (set this variable equal to your spot id)
+    * postId=-1 (set this variable equal to the post id of the article)
+    * inactive=true
+    * data-post-url='https%3A%2F%2Fwww.examplewebsite.com' (set this variable to the article url in encoded url form)
+      
+    <img src="https://s3.amazonaws.com/www.spotim.name/rich/amp_image_example2.png"> 
+    
+3. Make sure that each article page has the appropriate postId and data-post-url in encoded url form. If you click on conversation while on a Spot.IM supported amp page, it should redirect you to the mobile non-amp version of the article and automatically scroll down to conversation. <br><br>
+**Warning - If the data-post-url is wrong (i.e. not in encoded url form or a link that does not have Spot on it), clicking on conversation will redirect to the link provided which may be broken**
+
