@@ -112,7 +112,7 @@ The file with the implementation code to be pasted into the Body of the page has
 _**Note:** By default, this code will present Conversation below Popular in the Community Widget. If you prefer differently, make sure to ask your Account Manager for this adjustment. 
 
 ## Amp for SSO
-Currently, we do not support AMP for SSO. However, we have an option to redirect to the mobile, non-amp version of the article page. 
+Currently, we do not support AMP for SSO directly. However, we have an option to redirect to the mobile, non-amp version of the article page. 
 
 ###Implementation Instructions
 1. Search for the source code of the conversation iframe in the amp code provided. The easiest way to locate this is to search for "postId" and it should bring up code that looks like this:
