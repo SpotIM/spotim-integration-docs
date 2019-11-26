@@ -47,9 +47,9 @@ The Social Kit standard implementation adds two widgets to each page: Real-Time 
 To add these widgets to your page, place the following element in the location on the page where you want the widgets to appear. Please note that our Popular in the Community Widget can only be turned on by contacting your partner success manager. Its default location is above conversation. 
 
 You will need to replace the following placeholders:
-- `SPOT_ID` - Your Spot ID. **Notice** that the `SPOT_ID` appears in 3 places.
+- `SPOT_ID` - Your Spot ID.
 - `POST_ID` in `data-post-id` attribute - A unique identifier for this Conversation.
-- `ARTICLE_TOPIC` in `data-article-tags` attribute - Main topics of the article. Can include several topics, separated by ",".This attribute is optional, and is used to support Spot.IM's advanced features, such as Topic Pages, Recirculation by Topic, etc.
+- `ARTICLE_TOPIC` in `data-article-tags` attribute - Main topics of the article. Can include several topics, separated by ",".This attribute is optional, and is used to support Spot.IM's advanced features such as Recirculation by Topic, etc.
 - `ARTICLE_URL` in `data-post-url` attribute - The full Canonical URL of the page. This attribute is optional, and is used only if page's Canonical URL reference in the page's head section is erroneous.
 
 ```html
