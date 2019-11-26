@@ -17,8 +17,6 @@ For more information contact Spot.IM at https://www.spot.im/contact/
     * Community Question - Engage your community with a custom question or call to action displayed above the conversation.
 * [Popular-in-the-Community](recirculation/README.md) - Popular-in-the-Community, or Community Recirculation, promotes your page's content by showcasing user-generated content.
 * [Community Spotlight](spotlight/README.md) - Community Spotlight gives a call to action: enter your email or go directly to conversation.
-* [Community Pages](Community/README.md) - Community Pages use your articles, alongside user generated content, to create new pages.
-    * [Community Promo](community/community-promo/README.md) - Drive traffic to your community pages.
 
 
 **Network Options:**
