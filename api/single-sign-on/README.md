@@ -157,6 +157,32 @@ This must be done as a backend to backend call as to ensure the security of your
 https://www.spot.im/api/sso/v1/user/3169059
 Header: x-spotim-sso-access-token: ACCESS_TOKEN
 
+**Sample Reponse**
+```
+{
+  "success": true,
+  "user": {
+    "primary_key": "PKEY",
+    "spotim_user_id": "string",
+    "user_name": "string",
+    "display_name": "string",
+    "image_url": string,
+    "email": string,
+    "email_verified": boolean,
+    "livefyre_user_id": string,
+    "settings": {
+      "notifications": {
+        "email": {
+          "liked_your_message": integer,
+          "user_mentioned": integer,
+          "replied_to_message": integer
+        }
+      }
+    }
+  }
+}
+```
+
 ## Integration for "Require Login" moderation policy
 
 Spot.IM allows moderators to activate a moderation policy which requires users to be logged in before writing comments.
