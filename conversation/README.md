@@ -1,7 +1,7 @@
 # Real-Time Conversation 
 The Conversation widget not only transports your users to witness live non-toxic discourse between a plethora of passionate contributers but it allows them to be a part of the Conversation which encourages users to feel part of something bigger than your website. If you would like additional information about how to implement conversation along with any of our other widgets, please [click here](https://github.com/SpotIM/spotim-integration-docs/blob/master/social-kit/README.md).
 
-## Specific Use Case Conversation Implementations
+## Specific Conversation use Case Implementations
 
 #### Implementing Conversation Behind a Button
 There are certain situations where you may need a place your launcher script in front of a button, but need to have conversation load behind a button. A popular use case would be loading our Popular in the Community in front of a button, but having our conversation load behind it. Follow the stseps below to implement conversation for this use case:
