@@ -1,26 +1,20 @@
 # Spot.IM Social Kit
-The Spot.IM Social Kit consists of two components: Real-Time Conversation and Popular-in-the-Community. These components allow your users to write comments and replies to your articles, and view popular community-generated content on your articles.
 
-Power conversation with Real-Time Conversation, a lightweight and fully customizable module to inspire your audience to engage. Complete with automatic moderation for illicit or toxic chatter, Real-Time Conversation will help boost pageviews and SEO rankings.
+The Spot.IM Social Kit allows users to actively engage within your site giving them the platform to seamlessly integrate into your community. Through our unique real-time commenting feature, our social kit offers users the ability to view the most popular content while producing a captivating discussion directly on the page. The Spot.IM Social Kit is composed of three widgets: 
 
-Popular-in-the-Community promotes the most popular content from your site by showcasing user-generated content (UGC). This unit drives users to more of your content and features a monetization component so you can generate meaningful revenue via revshare.
+1. Conversation: a lightweight and customizable module designed to motivate your audience to interact. Complete with automatic moderation for illicit or toxic chatter,  our real-time Conversation widget will help boost page views and SEO rankings.
+2. Popular in the Community: this unit promotes the most popular articles from your site by showcasing user-generated content (UGC) above Conversation. Popular in the Community drives your visitors to a range of material your website promotes and features a monetization component so you can generate meaningful revenue via rev-share.
+3. Community Spotlight: our customizeable Community Spotlight widget creates a call to action for registered users to instantly dive into the Conversation and encourages first time users to evolve into power users through an email sign up form.
 
-If you are using WordPress, please see the [WordPress documentation page](../wordpress/README.md).
+If you are using WordPress, please see the [WordPress documentation page](https://github.com/SpotIM/spotim-integration-docs/blob/master/wordpress/README.md).
 
 ## Contents
   - [Before You Begin](#before-you-begin)
     - [Best Practices for Creating Post IDs](#best-practices-for-creating-post-ids)
-  - [Standard Implementation](#standard-implementation)
-  - [Other Options](#other-options)
-    - [Standalone Conversation Widget](#standalone-conversation-widget)
-    - [Dynamic Conversation Widget in PHP](#dynamic-conversation-widget-in-php)
-    - [Standalone Popular in the Community Widget](#standalone-popular-in-the-community-widget)
-    - [Standalone Side Rail Popular in the Community Widget](#standalone-side-rail-popular-in-the-community-widget)
-    - [Multiple Conversation Instances](#multiple-conversation-instances)
-    - [Displaying the Number of Messages in a Conversation](#displaying-the-number-of-messages-in-a-conversation)
-    - [Importing Comments from Other Platforms](#importing-comments-from-other-platforms)
-
-  
+  - [Standard Implementation](#standard-implementation-via-launcher)
+    - [Conversation Widget](#Conversation)
+    - [Popular in the Community Widget](#popular-in-the-community)
+    - [Community Spotlight](#community-spotlight)
 
 ## Before You Begin
 Before using the Spot.IM Social Kit, you will need your Spot.IM `Spot ID`. You will also need to create a `Post ID` for each article or page that you want to display the Social Kit on. You can use any alphanumeric value as a `Post ID`, but it must be unique to each page. See the following section for [best practices for creating Post IDs](#best-practices-for-creating-post-ids).
@@ -39,18 +33,17 @@ Post IDs should be short. A common approach is to use the page's title or conten
 - `article-title`
 - `article-short-link`
 
-## Standard Implementation
-The Social Kit standard implementation adds two widgets to each page: Real-Time Conversation Widget and the Popular-in-the-Community Widget. The Conversation Widget lets your users view and create comments, while the Popular-in-the-Community Widget showcases popular user-generated content.
-
-![Image of a standard implementation](social-kit.png)
-
-To add these widgets to your page, place the following element in the location on the page where you want the widgets to appear. Please note that our Popular in the Community Widget can only be turned on by contacting your partner success manager. Its default location is above conversation. 
+## Standard Implementation via Launcher
+To add these widgets to your site insert the following block of code where you would like the product to render on each page. 
+The default location is at the end of your article to ensure your users are encouraged to particpate in that article's 
+Conversation. It is imperative to implement this launcher within your code to enable any of our products. Once live, you have the ability to alter the styling and placement of the widget through our internal tool or directly with our team. Please note that our Popular in the Community and Community Spotlight widget's can only be turned on by contacting your partner success manager.
 
 You will need to replace the following placeholders:
 - `SPOT_ID` - Your Spot ID.
-- `POST_ID` in `data-post-id` attribute - A unique identifier for this Conversation.
-- `ARTICLE_TOPIC` in `data-article-tags` attribute - Main topics of the article. Can include several topics, separated by ",".This attribute is optional, and is used to support Spot.IM's advanced features such as Recirculation by Topic, etc.
-- `ARTICLE_URL` in `data-post-url` attribute - The full Canonical URL of the page. This attribute is optional, and is used only if page's Canonical URL reference in the page's head section is erroneous.
+- `ARTICLE_URL` in `data-post-url` attribute (optional) - The full URL address for the page. This attribute is used only if page's URL reference in the page's head section is erroneous.
+- `ARTICLE_TOPIC` in `data-article-tags` attribute (optional)- Main topics of the article. Can include several topics, separated by ",".  
+- `POST_ID` in `data-post-id` attribute - A unique identifier for this particular article.
+
 
 ```html
 <script async src="https://launcher.spot.im/spot/SPOT_ID"
@@ -59,68 +52,19 @@ You will need to replace the following placeholders:
     data-article-tags="ARTICLE_TOPIC1, ARTICLE_TOPIC2"    
     data-post-id="POST_ID"></script>
 ```
+Examples of Conversation and Popular in the Community: 
 
-## Other Implementations
-Spot.IM is actively working on additional documentation. Please contact us if you can not find necessary information online. 
+![image](https://s3.amazonaws.com/www.spotim.name/danielle+/IMG.png)
 
-### Standalone Conversation Widget
-To display a Conversation widget by itself, place the Conversation's `<script>` element in the location on the page where you want the widget to appear. You can find an implementation example [here](conversation-example.html).
+### Conversation 
+To display a [Conversation](https://github.com/SpotIM/PS-Tools/blob/master/github-revamp/conversation-v2.md) widget by itself, place the launcher `<script>` element in the location on the page where you want the widget to appear. 
 
-```html
-<script async src="https://launcher.spot.im/spot/SPOT_ID"
-    data-spotim-module="spotim-launcher"
-    data-post-url="ARTICLE_URL"
-    data-article-tags="ARTICLE_TOPIC1, ARTICLE_TOPIC2"    
-    data-post-id="POST_ID"></script>
-```
+### Popular in the Community 
+Popular in the Community promotes the most popular content from your site by showcasing user-generated content (USG). This unit drives users to more of your content and features a monetization component so you can generate meaningful revenue via revenue share. To implement a standalone Popular in the Community widget please [reference this](https://github.com/SpotIM/PS-Tools/blob/master/github-revamp/pitc2.0-v2.md). 
 
-### Dynamic Conversation Widget in PHP
-To display a Conversation widget in WP, utilizing the information that is already on the WP system, you can place the following Conversation's `<script>` element in the location on the page where you want the widget to appear.
+### Community Spotlight
+The Community Spotlight feature improves site engagement by allowing users to build a community directly on your page. Community Spotlight prompts users to enter their email address or instantly join the conversation as registered users. The default location for this feature is above the Popular in the Community widget however, you can seamlessly inject Community Spotlight to the siderail or the middle of your page, for example. This widget will boost your number of returning power users and intrigue new users to be a part of your website's community. 
 
-```html
-<script async
-    data-spotim-module="spotim-launcher"
-    src="https://launcher.spot.im/spot/SPOT_ID"
-    data-post-url="<?php echo esc_url( get_permalink()); ?>"
-    data-article-tags="<?php echo implode(', ', wp_get_post_tags( get_the_ID(), array( 'fields' => 'names' ) )); ?>"    
-    data-post-id="<?php echo get_the_ID(); ?>"></script>
-```
+Community Spotlight implementation is dependent on whether you have our conversation widget active on your page. To activate Spotlight first contact your Publisher Success Manager to have it set up in our backend. Next, place the appropriate code where you would like Community Spotlight to load. 
 
-### Importing Comments from Other Platforms
-Our conversation widget offers the ability to import comments from other platforms. For more information, see the [Import](../imports/readme.md) documentation page.
-
-## Popular in the Community 1.0 Widgets
-*Please note that this functionality is only available for Popular in the Community 1.0. We are working on expanding our capabilities for Popular in the Community 2.0.* <br>
-
-### Standalone Popular in the Community Widget
-
-To display a Popular in the Community widget by itself, place the following elements in the location on the page where you want the widget to appear. You can find an implementation example [here](popular-in-the-community-example.html).
-
-```html
-<div data-spotim-module="recirculation" data-spot-id="SPOT_ID"></div>
-<script src="https://recirculation.spot.im/spot/SPOT_ID"></script>
-```
-
-### Standalone Side Rail Popular in the Community Widget
-To display a Popular in the Community Widget as a side bar by itself, place the following elements:
-Embed this code where you want the Social Side Rail to appear:
-
-```html
-<div style="color:#7B7F83;margin:15px;font-size:13px;text-transform:uppercase;">Popular in the Community</div>
-<div data-spotim-module="recirculation" data-spot-id="SPOT_ID" data-spotim-product="siderail"></div>
-<script async src="https://recirculation.spot.im/spot/SPOT_ID/siderail" data-spotim-script="recirculation"></script>
-```
-
-Replace marked parameters:
-
-SPOT_ID - Your Spot.ID, ask your account manager for a Spot.ID
-
-### Multiple Conversation Instances
-You can embed multiple Conversation widgets on a single page. For more information, see the [Multiple Conversation Instances](../conversation/multiple-conversation-instances/README.md) documentation page.
-
-### Displaying the Number of Messages in a Conversation
-You can display a separate widget showing the number of messages in a Conversation. For more information, see the [Message Count](../conversation/comments-count/README.md) documentation page.
-
-
-
-
+For more Community Spotlight implementation information please view our [FAQ page](https://github.com/SpotIM/PS-Tools/blob/master/github-revamp/spotlight-v2.md). 
