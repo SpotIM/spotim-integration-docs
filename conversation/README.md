@@ -22,9 +22,6 @@ There are certain situations where you may need a place your launcher script in 
 <div data-spotim-module="conversation"></div>
 ```
 
-#### Multiple Conversation Instances
-You can embed multiple Conversation widgets on a single page. For more information, see the [Multiple Conversation Instances](../conversation/multiple-conversation-instances/README.md) documentation page.
-
 #### Displaying the Number of Messages in a Conversation
 You can display a separate widget showing the number of messages in a Conversation. For more information, see the [Message Count](../conversation/comments-count/README.md) documentation page.
 
