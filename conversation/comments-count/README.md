@@ -30,3 +30,18 @@ If you wish to display the number of comments in a conversation, updated real ti
 ```html
 <div class="spot-im-replies-count" data-post-id="POST_ID" real-time="true"></div>
 ```
+
+## Loading Conversation Count Using API Call
+There are certain scenarios where loading conversation count for an article does not work because conversation is loaded behind a button but you want to display comment count outside of the button. This can be solved by using our replies count api resource. This call retrives the count of replies for a specific article. It is a HTTPS GET which takes this form: 
+```https://open-api.spot.im/v1/messages-count```
+
+There are only two parameters:
+1. spot_id - Your spot id
+2. post_ids - Your post id
+
+An example call would look like this:
+<br><br>
+```https://open-api.spot.im/v1/messages-count?spot_id=SPOT_ID&posts_ids=POST_ID```
+<br><br>
+*Please note this call only pulls the number. It is up to the publisher to determine how to display replies count.*
+
