@@ -8,7 +8,7 @@ For more information contact Spot.IM at https://www.spot.im/contact/
 
 
 **Features:**
-* [Social Kit](social-kit/README.md) - Conversation and Popular in the Community widgets
+* [Social Kit](social-kit/README.md) - Conversation, Popular in the Community, and Spotlight widgets
 * [Conversation](conversation/README.md) - Real-Time Conversation is a lightweight, customizable module to inspire audience engagement.
     * [Importing Conversations](social-kit/README.md#Integrations) - Import [Facebook](social-kit/README.md#facebook), Wordpress, [Disqus Posts](social-kit/README.md#disqus), and/or [Livefyre Posts](conversation/import-posts/livefyre-import/README.md)
     * Display [comments count](conversation/comments-count/README.md) anywhere on your page
