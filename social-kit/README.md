@@ -57,7 +57,7 @@ Examples of Conversation and Popular in the Community:
 ![image](https://s3.amazonaws.com/www.spotim.name/danielle+/IMG.png)
 
 ### Conversation 
-To display a [Conversation](https://github.com/SpotIM/PS-Tools/blob/master/github-revamp/conversation-v2.md) widget by itself, place the launcher `<script>` element in the location on the page where you want the widget to appear. 
+To display a [Conversation](https://github.com/SpotIM/spotim-integration-docs/blob/master/conversation/README.md) widget by itself, place the launcher `<script>` element in the location on the page where you want the widget to appear. 
 
 ### Popular in the Community 
 Popular in the Community promotes the most popular content from your site by showcasing user-generated content (USG). This unit drives users to more of your content and features a monetization component so you can generate meaningful revenue via revenue share. To implement a standalone Popular in the Community widget please [click here](https://github.com/SpotIM/PS-Tools/blob/master/github-revamp/pitc2.0-v2.md). 
