@@ -72,7 +72,7 @@ For more Community Spotlight implementation information please view our [FAQ pag
 ### Custom Placement of Widgets
 By default, all of our widgets load where the launcher script is placed. It is possible to move popular in the community and our spotlight widget to another place on the page by adding a custom div. Note the launcher script still needs to be inserted on page and conversation will load there. Certain use cases where this can be overridden can be found [here](https://github.com/SpotIM/spotim-integration-docs/blob/master/conversation/README.md#specific-conversation-use-case-implementations)
 
-Place the appropriate div where you want the widget to load on page and the widget will load there.
+Insert the appropriate div of the widget you want to load on page and the widget will load there.
 ##### Popular in the Community Code
 ```<div data-spotim-module="pitc"></div>```
 
