@@ -60,14 +60,14 @@ Examples of Conversation and Popular in the Community:
 To display a conversation widget by itself, place the launcher `<script>` element in the location on the page where you want the widget to appear. If you need specific use case implementation instructions, please click [here](https://github.com/SpotIM/spotim-integration-docs/blob/master/conversation/README.md)
 
 ### Popular in the Community 
-Popular in the Community promotes the most popular content from your site by showcasing user-generated content (USG). This unit drives users to more of your content and features a monetization component so you can generate meaningful revenue via revenue share. To implement a standalone Popular in the Community widget please [click here](https://github.com/SpotIM/PS-Tools/blob/master/github-revamp/pitc2.0-v2.md).
+Popular in the Community promotes the most popular content from your site by showcasing user-generated content (USG). This unit drives users to more of your content and features a monetization component so you can generate meaningful revenue via revenue share. To implement a standalone Popular in the Community widget please [click here](https://github.com/SpotIM/spotim-integration-docs/edit/master/recirculation/README.md).
 
 ### Community Spotlight
 The Community Spotlight feature improves site engagement by allowing users to build a community directly on your page. Community Spotlight prompts users to enter their email address or instantly join the conversation as registered users. The default location for this feature is above the Popular in the Community widget however, you can seamlessly inject Community Spotlight to the siderail or the middle of your page, for example. This widget will boost your number of returning power users and intrigue new users to be a part of your website's community. 
 
 Community Spotlight implementation is dependent on whether you have our conversation widget active on your page. To activate Spotlight first contact your Publisher Success Manager to have it set up in our backend. Next, place the appropriate code where you would like Community Spotlight to load. 
 
-For more Community Spotlight implementation information please view our [FAQ page](https://github.com/SpotIM/PS-Tools/blob/master/github-revamp/spotlight-v2.md).
+For more Community Spotlight implementation information please view our [FAQ page](https://github.com/SpotIM/spotim-integration-docs/tree/master/spotlight).
 
 ### Custom Placement of Widgets
 By default, all of our widgets load where the launcher script is placed. It is possible to move popular in the community and our spotlight widget to another place on the page by adding a custom div. Note the launcher script still needs to be inserted on page and conversation will load there. Certain use cases where this can be overridden can be found [here](https://github.com/SpotIM/spotim-integration-docs/blob/master/conversation/README.md#specific-conversation-use-case-implementations)
@@ -79,4 +79,4 @@ Place the appropriate div where you want the widget to load on page and the widg
 ##### Spotlight Code
 ```<div data-conversation-spotlight></div>```
 
-You can find additional customizations by going to Popular in the Community and Spotlight sections. 
+Additional customizations can be found by going to [Popular in the Community](https://github.com/SpotIM/spotim-integration-docs/edit/master/recirculation/README.md) and [Spotlight](https://github.com/SpotIM/spotim-integration-docs/tree/master/spotlight) sections. 
