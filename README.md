@@ -13,7 +13,6 @@ For more information contact Spot.IM at https://www.spot.im/contact/
     * [Importing Conversations](social-kit/README.md#Integrations) - Import [Facebook](social-kit/README.md#facebook), Wordpress, [Disqus Posts](social-kit/README.md#disqus), and/or [Livefyre Posts](conversation/import-posts/livefyre-import/README.md)
     * Display [comments count](conversation/comments-count/README.md) anywhere on your page
     * [Back-to-comments](conversation/back-to-comments/README.md)
-    * [Multiple Conversation Instances](conversation/multiple-conversation-instances/README.md)
     * Community Question - Engage your community with a custom question or call to action displayed above the conversation.
 * [Popular-in-the-Community](recirculation/README.md) - Popular-in-the-Community, or Community Recirculation, promotes your page's content by showcasing user-generated content.
 * [Community Spotlight](spotlight/README.md) - Community Spotlight gives a call to action: enter your email or go directly to conversation.
