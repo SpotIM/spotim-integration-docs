@@ -17,7 +17,7 @@ For more information contact Spot.IM at https://www.spot.im/contact/
 * [Popular-in-the-Community](recirculation/README.md) - Popular-in-the-Community, or Community Recirculation, promotes your page's content by showcasing user-generated content.
 * [Community Spotlight](spotlight/README.md) - Community Spotlight gives a call to action: enter your email or go directly to conversation.
 * [Reactions](reactions/README.md) - Reactions opens the door to a more spontaneous, emotional engagement with your content
-* [SDK](sdk/README.md) - A social engagement solution for mobile apps 
+* [SDK](sdk/readme.md) - A social engagement solution for mobile apps 
 
 
 
