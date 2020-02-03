@@ -32,7 +32,8 @@ For more information contact Spot.IM at https://www.spot.im/contact/
 * [WordPress Integration](wordpress/README.md)
     * [AMP for WordPress](wordpress/ampforwp/README.md)
     * [LiveBlog on WordPress](wordpress/live-blog/README.md)
-* [client-side events](api/js-events/README.md) - Registering listeners for special actions when a user uses Spot.IM Widgets. 
+* [client-side events](api/js-events/README.md) - Registering listeners for special actions when a user uses Spot.IM Widgets.
+* [GDPR Export](https://github.com/SpotIM/spotim-integration-docs/blob/master/api/gdpr.md)
 
 
 <!-- UPDATE BANNER!!! -->
