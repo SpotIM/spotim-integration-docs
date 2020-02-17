@@ -55,7 +55,7 @@ Importing Livefyre comments requires one additional attributes:
 If you do not use any of the commenting platforms listed above, there may be an option to manually import comments though a CSV file. The following sections list requirements and options for CSV imports.
 
 #### Necessary Columns For All Manual Imports
-* POST_ID - this needs to match the POST_ID of the article where you put our conversation widget
+* post_id - this needs to match the POST_ID of the article where you put our conversation widget
 * user_id
 * message_id
 * content
