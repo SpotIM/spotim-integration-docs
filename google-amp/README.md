@@ -97,6 +97,7 @@ frameborder="0" src="https://amp.spot.im/production.html?spot_im_highlight_immed
 <div overflow class="spot-im-amp-overflow" tabindex="0" role="button" aria-label="Read more">Load more...</div>
 </amp-iframe>
 ```
+- To disable users reply option: Append to the src url the query: ```&disableReplies=true```
 
 ## Using AMP for the Standard Social Kit
 At the moment, Popular in the Community Widget has AMP-compatible code in Beta stages.
