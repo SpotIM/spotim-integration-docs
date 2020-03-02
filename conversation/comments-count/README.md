@@ -37,7 +37,7 @@ There are certain scenarios where loading conversation count for an article does
 
 There are only two parameters:
 1. spot_id - Your spot id
-2. post_ids - Your post id
+2. posts_ids - Your post id
 
 An example call would look like this:
 <br><br>
