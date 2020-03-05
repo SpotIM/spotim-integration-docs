@@ -79,7 +79,7 @@ It gathers the parameters listed in the table below, and issues a GET request to
 | `user_name`  | A unique user name that will be allocated for the user. Spot.IM will ensure this is unique even if taken.  | Yes  | `john_doe`  |
 | `display_name`  | Full name  | No  | `John Doe`  |
 | `image_url`  | User profile image URL  | No  | `https://example.com/image1.jpg`  |
-| `email`  | User email  | No  | john_doe@example.com  |
+| `email`  | User email  | No but if you do not pass email, your team will not be able to log in to admin panel  | john_doe@example.com  |
 | `email_verified`  | Set to true if the email was verified. Registering non verified emails in Spot.IM as verified violates the terms of use and will invalidate all users.  | No  | `true`  |
 
 **Example**
