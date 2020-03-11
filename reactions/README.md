@@ -16,7 +16,7 @@ This is the default location that is located above your conversation widget
 #### Manual Integration
 You also have the capability of manually adding a line of code to wherever you want the widget to load
 ```html
-<div data-spotim-app="reactions" data-spot-id="sp_qaNXmDxI"  data-post-id=“INSERT_YOUR_POST_ID”></div>
+<div data-spotim-app="reactions" data-spot-id="SPOT_ID_HERE"  data-post-id=“INSERT_YOUR_POST_ID”></div>
 ```
 
 You can next set your title. This is the default title that will show up for your widget. You have the option to individually adjust the title page by going to the article page and editing the title if you have admin privledges. 
