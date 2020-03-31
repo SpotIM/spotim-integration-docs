@@ -4,7 +4,7 @@ The Conversation widget not only transports your users to witness live non-toxic
 ## Specific Conversation use Case Implementations
 
 #### Implementing Conversation Behind a Button
-There are certain situations where you may need a place your launcher script in front of a button, but need to have conversation load behind a button. A popular use case would be loading our Popular in the Community in front of a button, but having our conversation load behind it. Follow the stseps below to implement conversation for this use case:
+There are certain situations where you may need a place your launcher script in front of a button, but need to have conversation load behind a button. A popular use case would be loading our Popular in the Community in front of a button, but having our conversation load behind it. Follow the steps below to implement conversation for this use case:
 
 1. First, add our launcher code in front of the button. Usually, our conversation widget loads where the launcher is placed, so an additional data attribute **data-spotim-autorun="false"** needs to be added. This attribute delays the launch of the conversation widget. An example launcher script would look like this: 
 
