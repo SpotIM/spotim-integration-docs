@@ -19,7 +19,7 @@ There are certain situations where you may need a place your launcher script in 
 ```
 2. Inject the conversation container below after the user clicks on the button
 ```html
-<div data-spotim-module="conversation"></div>
+<div data-spotim-module="conversation" data-post-id="POST_ID"></div>
 ```
 
 #### Displaying the Number of Messages in a Conversation
