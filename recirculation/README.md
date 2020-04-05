@@ -24,7 +24,7 @@ To load multiple instances of Popular in the Community, insert the following div
 <br>
 ```<div data-spotim-module="pitc"></div>```
 
-#### Double Decker
+#### More Conversations for You
 Popular in the Community has an option to support two rows (one above conversation and one below). Please contact your Spot.IM Partner Success Manager if you would like to enable this option. 
 
 
