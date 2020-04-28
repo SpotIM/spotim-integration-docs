@@ -27,7 +27,7 @@ The Community Spotlight feature will help you showcase and motivate your communi
 ## Implementation 
 
 *If launcher code is NOT already on your page*
-Please insert the following line of code where you want spotlight to loa
+Please insert the following line of code where you want spotlight to load.
 ```html 
 
 <script async data-spotim-module="spotim-launcher" src="https://launcher.spot.im/spot/INSERT_SPOT_ID_HERE"></script>
