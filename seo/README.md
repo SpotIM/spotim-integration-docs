@@ -163,3 +163,4 @@ Calling Spot.IM SEO Service is done by sending a POST request to:
 'https://seo.spot.im/v2/live-blog/live-blog/:spotId/:eventId?json=true'
 
 (Don't forget to set your `spotId` and the current `eventId`)
+Also please send Headers: Origin, Referer
