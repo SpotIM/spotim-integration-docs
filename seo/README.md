@@ -156,3 +156,10 @@ Calling Spot.IM SEO Service is done by sending a POST request to:
 As a response you'll get a markup that holds SEO information for Google and other search engines. This markup implements JSON-LD based on the [schema.org](http://schema.org/) protocol. Appending this markup to the page let search engines to index the page.
 
 When done, you can verify the integration using [Google's Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool) both by url (if your url is accessible by the world) or by pasting an html.
+
+For Live blog:
+Calling Spot.IM SEO Service is done by sending a POST request to:
+
+'https://seo.spot.im/v2/live-blog/live-blog/:spotId/:eventId?json=true'
+
+(Don't forget to set your `spotId` and the current `eventId`)
