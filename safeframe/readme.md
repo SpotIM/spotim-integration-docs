@@ -60,7 +60,7 @@ Prerequisites
     3\. Render the frame with width set as you wish on desktop / wide screens and with full-screen width on mobile (implementation proposal):
 
     ```javascript
-      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile| Opera Mini/i.test(
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
         navigator.userAgent
       );
 
@@ -83,8 +83,8 @@ The markup for the safeframe is the same as your regular implementation with add
 <script
   async
   data-spotim-module="spotim-launcher"
-  src="https://launcher.spot.im/spot/SPOT\_ID"
-  data-post-id="POST\_ID"
+  src="https://launcher.spot.im/spot/SPOT_ID"
+  data-post-id="POST_ID"
 ></script>
 ```
 
@@ -120,9 +120,9 @@ Technical implementation
       if (type && type === "spotim") {
         if (
           action &&
-          window.SPOTIM.safeframe.messageHandlers\[action\] instanceof Function
+          window.SPOTIM.safeframe.messageHandlers[action] instanceof Function
         ) {
-          window.SPOTIM.safeframe.messageHandlers\[action\](args);
+          window.SPOTIM.safeframe.messageHandlers[action](args);
         }
       }
     }
@@ -131,7 +131,7 @@ Technical implementation
       var action = args.action;
       var callback = args.callback;
 
-      window.SPOTIM.safeframe.messageHandlers\[action\] = callback;
+      window.SPOTIM.safeframe.messageHandlers[action] = callback;
     }
 
     if (!window.SPOTIM) {
@@ -219,10 +219,10 @@ Actual implementation:
     ```javascript
       function subscribeToApiReady() {
         window.SPOTIM.safeframe.subscribeToMessage({
-          action: "sso\_api\_ready",
+          action: "sso_api_ready",
           callback: function () {
             // maybe change some state that indicates spotim-api is ready
-            console.log("spot\_im\_api\_ready");
+            console.log("spot_im_api_ready");
           },
         });
       }
@@ -243,9 +243,9 @@ Actual implementation:
     ```javascript
     function subscribeToCodeA() {
       window.SPOTIM.safeframe.subscribeToMessage({
-        action: "sso\_code\_a",
+        action: "sso_code_a",
         callback: function callback(args) {
-          var code\_a = args.code\_a;
+          var code_a = args.code_a;
           fetch(\`/api/spotim-sso`, {
             method: "POST",
             mode: "cors",
@@ -280,18 +280,18 @@ Actual implementation:
     ```javascript
     function onLoginSuccess() {
       window.SPOTIM.safeframe.subscribeToMessage({
-        action: "sso\_login\_success",
+        action: "sso_login_success",
         callback: function callback(args) {
-          console.log("sso\_login\_success", "userData: ", args);
+          console.log("sso_login_success", "userData: ", args);
         },
       });
     }
 
     function onLoginError() {
       window.SPOTIM.safeframe.subscribeToMessage({
-        action: "sso\_login\_error",
+        action: "sso_login_error",
         callback: function callback(args) {
-          console.log("sso\_login\_error", args);
+          console.log("sso_login_error", args);
         },
       });
     }
@@ -318,9 +318,9 @@ To logout, send a logout message to frame:
 Integration for "Require Login" moderation policy:  
 -----------------------------------------------------
 
-Spot IM events are bubbled up as a message to host under the action: ‘spotim\_event’.  
+Spot IM events are bubbled up as a message to host under the action: `spotim_event`.  
   
-That is, the publisher can listen for the ‘spotim\_event’ from type: `'spot-im-login-start'` to invoke the sign up/login process.
+That is, the publisher can listen for the `spotim_event` from type: `'spot-im-login-start'` to invoke the sign up/login process.
 
 For more information [Click Here](https://github.com/SpotIM/spotim-integration-docs/tree/master/api/single-sign-on#integration-for-require-login-moderation-policy).
 
@@ -329,7 +329,7 @@ For more information [Click Here](https://github.com/SpotIM/spotim-integration-d
 
   function subscribeToSpotimEvents() {
     window.SPOTIM.safeframe.subscribeToMessage({
-      action: "spotim\_event",
+      action: "spotim_event",
       callback: function callback(args) {
         // handle Events: {type: 'event-type', params: {attached params}}
         console.log("event-type:", args.type, "params:", args.params);
@@ -372,9 +372,9 @@ function initSpotimMessageHandlers() {
     if (type && type === "spotim") {
       if (
         action &&
-        window.SPOTIM.safeframe.messageHandlers\[action\] instanceof Function
+        window.SPOTIM.safeframe.messageHandlers[action] instanceof Function
       ) {
-        window.SPOTIM.safeframe.messageHandlers\[action\](args);
+        window.SPOTIM.safeframe.messageHandlers[action](args);
       }
     }
   }
@@ -383,7 +383,7 @@ function initSpotimMessageHandlers() {
     var action = args.action;
     var callback = args.callback;
 
-    window.SPOTIM.safeframe.messageHandlers\[action\] = callback;
+    window.SPOTIM.safeframe.messageHandlers[action] = callback;
   }
 
   function sendMessageToFrame(msg) {
@@ -395,27 +395,27 @@ function initSpotimMessageHandlers() {
 
   function onLoginError() {
     window.SPOTIM.safeframe.subscribeToMessage({
-      action: "sso\_login\_error",
+      action: "sso_login_error",
       callback: function callback(args) {
-        console.log("sso\_login\_error", args);
+        console.log("sso_login_error", args);
       },
     });
   }
 
   function onLoginSuccess() {
     window.SPOTIM.safeframe.subscribeToMessage({
-      action: "sso\_login\_success",
+      action: "sso_login_success",
       callback: function callback(args) {
-        console.log("sso\_login\_success", "userData: ", args);
+        console.log("sso_login_success", "userData: ", args);
       },
     });
   }
 
   function subscribeToCodeA() {
     window.SPOTIM.safeframe.subscribeToMessage({
-      action: "sso\_code\_a",
+      action: "sso_code_a",
       callback: function callback(args) {
-        var code\_a = args.code\_a;
+        var code_a = args.code_a;
         fetch(\`https://safeframe-server-shaybs.spotim1.now.sh/api/spotim-sso`, {
           method: "POST",
           mode: "cors",
@@ -425,7 +425,7 @@ function initSpotimMessageHandlers() {
             Accept: "application/json",
           },
           body: JSON.stringify({
-            code\_a: code\_a,
+            code_a: code_a,
             username: "test",
           }),
         })
@@ -446,7 +446,7 @@ function initSpotimMessageHandlers() {
 
   function subscribeToApiReady() {
     window.SPOTIM.safeframe.subscribeToMessage({
-      action: "sso\_api\_ready",
+      action: "sso_api_ready",
       callback: function callback() {
         window.SPOTIM.safeframe.isApiReady = true;
         if (window.SPOTIM.safeframe.loginCalled) {
@@ -458,7 +458,7 @@ function initSpotimMessageHandlers() {
 
   function subscribeToSpotimEvents() {
     window.SPOTIM.safeframe.subscribeToMessage({
-      action: "spotim\_event",
+      action: "spotim_event",
       callback: function callback(args) {
         // handle Events: {type: 'event-type', params: {attached params}}
         console.log("event-type:", args.type, "params:", args.params);
