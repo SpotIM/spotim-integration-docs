@@ -40,7 +40,7 @@ Prerequisites
                   supports: {
                     "exp-push": 1,
                     "resize-to": 1,
-                    cmsg: 1,
+                    "cmsg": 1,
                     ...
                   },
                 },
@@ -79,7 +79,7 @@ Markup
 The markup for the safeframe is the same as your regular implementation with additional style tag that ensures the conversation will take safeframe’s full width:
 
 ```html
-<style>#fc\_align { width: 100%; }</style>
+<style>#fc_align { width: 100%; }</style>
 <script
   async
   data-spotim-module="spotim-launcher"
