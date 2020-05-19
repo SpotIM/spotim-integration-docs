@@ -25,6 +25,7 @@ For more information contact Spot.IM at https://www.spot.im/contact/
 **Network Options:**
 * [Open API](api/open-api/README.md) - Backup your user generated content.
 * [Single Sign On (SSO)](api/single-sign-on/README.md) - Users sign in on your site(s), not Spot Widgets. 
+* [Safeframe SSO integration docs](https://github.com/SpotIM/spotim-integration-docs/blob/master/safeframe/readme.md) - Implement Conversation inside a safeframe.
 
 
 **More:**
