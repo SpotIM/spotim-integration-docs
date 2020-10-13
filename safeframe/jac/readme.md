@@ -102,7 +102,7 @@ Saframe’s SSO integration is the same as our [general SSO integration](https:/
         action &&
         window.SPOTIM.safeframe.messageHandlers[action] instanceof Function
       ) {
-        window.SPOTIM.safeframe.messageHandlers[action](args);
+        window.SPOTIM.safeframe.messageHandlers[action](args, posId);
       }
     }
   }
@@ -310,7 +310,7 @@ For more information [Click Here](https://github.com/SpotIM/spotim-integration-d
 function subscribeToSpotimEvents() {
   window.SPOTIM.safeframe.subscribeToMessage({
     action: "spotim_event",
-    callback: function callback(args) {
+    callback: function callback(args, posId) {
       // handle Events: {type: 'event-type', params: {attached params}}
       console.log("event-type:", args.type, "params:", args.params);
     },
@@ -360,7 +360,7 @@ function initSpotimMessageHandlers() {
         action &&
         window.SPOTIM.safeframe.messageHandlers[action] instanceof Function
       ) {
-        window.SPOTIM.safeframe.messageHandlers[action](args);
+        window.SPOTIM.safeframe.messageHandlers[action](args, posId);
       }
     }
   }
@@ -373,11 +373,19 @@ function initSpotimMessageHandlers() {
   }
 
   function sendMessageToFrame(msg) {
-    JAC.updateMeta(
-      ["OpenWebWidget"],
-      "openWeb",
-      JSON.stringify(Object.assign({ type: "SPOTIM", id: uuid() }, msg))
-    );
+    // For multiple instances of OpenWebWidgets update meta to all widgets
+    function sendMessageToFrame(msg) {
+      const positions = JAC.getConfig().client.positions;
+      const owPositionNames = Object.keys(positions).filter((key) =>
+        key.startsWith("ow-")
+      );
+
+      JAC.updateMeta(
+        owPositionNames,
+        "openWeb",
+        JSON.stringify(Object.assign({ type: "SPOTIM", id: uuid() }, msg))
+      );
+    }
   }
 
   function onLoginError() {
@@ -450,9 +458,16 @@ function initSpotimMessageHandlers() {
   function subscribeToSpotimEvents() {
     window.SPOTIM.safeframe.subscribeToMessage({
       action: "spotim_event",
-      callback: function callback(args) {
+      callback: function callback(args, posId) {
         // handle Events: {type: 'event-type', params: {attached params}}
-        console.log("event-type:", args.type, "params:", args.params);
+        console.log(
+          "posId:",
+          posId,
+          "event-type:",
+          args.type,
+          "params:",
+          args.params
+        );
       },
     });
   }
