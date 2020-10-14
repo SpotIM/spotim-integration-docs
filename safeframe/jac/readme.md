@@ -6,6 +6,9 @@ Before start reading this integration doc, please make sure whether you are usin
 
 - The publisher is using SSO login flow.
 
+- In order to keep consistency with the login details of the user, the publisher **MUST** host the `safeframe.html` file of the actual iframe.
+  A cross domain issue will end with a "logout" of the user in safari every time a session ends.
+
 - Safeframe configurations:
 
   The host (aka the publisher) must define a set of configuration which allows OpenWeb products to resize the frame and have the ability to send messages between the frame and the host.
@@ -75,6 +78,21 @@ window.JAC_CONFIG = {
 ## SSO Integration
 
 Saframe’s SSO integration is the same as our [general SSO integration](https://github.com/SpotIM/spotim-integration-docs/tree/master/api/single-sign-on) with changes on the client side due to the message passing mechanism of the safeframe.
+
+## Relevant Spotim Events:
+
+```javascript
+// Sign up to post button clicked
+const SPOT_IM_LOGIN_START = "spot-im-login-start";
+// Safeframe's SSO api is ready
+const SSO_API_READY = "sso_api_ready";
+// Safeframe resized
+const SAFEFRAME_RESIZE = "safeframe-resize";
+// General OpenWeb failure
+const LAUNCHER_FAILED_EVENT = "spot-im-launcher-failed";
+// Conversation failure
+const CONVERSATION_FAILED = "spot-im-conversation-failed";
+```
 
 ## Technical implementation
 
