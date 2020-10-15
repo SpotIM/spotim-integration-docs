@@ -62,9 +62,10 @@ window.JAC_CONFIG = {
           },
         },
         meta: {
-          // The following object is just a namespace that the publisher uses to put data in for
-          // the widget to consume. You will see in the sample widget code that it pulls the data
-          // from this namespace.
+          // A meta data with the host url should be sent to the frame.
+          OpenWeb: {
+            hostUrl: location.href
+          },
         },
       },
     },
