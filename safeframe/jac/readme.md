@@ -74,6 +74,52 @@ window.JAC_CONFIG = {
 };
 ```
 
+- Since OpenWeb can't manipulate the publisher's DOM, the publisher should listen to the following query params and scroll to comments if one of the is visible:
+  ```javascript
+  const immediateKeys = [
+    "spot_reset_password",
+    "spot_ticket",
+    "spot_im_verify",
+    "spot_im_comment_id",
+    "spot_im_reply_id",
+    "spot_im_highlight_immediate",
+    "spot_im_scroll_to_comments",
+    "spot_im_expand_reply",
+    "spot_im_load_app_immediately",
+    "spot_im_open_profile_followers",
+    "ow_immediate",
+  ];
+  ```
+  The publisher can use this snippet for scrolling to the comments widget:
+
+```javascript
+function scrollToCommentsIfNeeded() {
+  const immediateKeys = [
+    "spot_reset_password",
+    "spot_ticket",
+    "spot_im_verify",
+    "spot_im_comment_id",
+    "spot_im_reply_id",
+    "spot_im_highlight_immediate",
+    "spot_im_scroll_to_comments",
+    "spot_im_expand_reply",
+    "spot_im_load_app_immediately",
+    "spot_im_open_profile_followers",
+    "ow_immediate",
+  ];
+  const urlParams = Array.from(
+    new URLSearchParams(window.location.search).keys()
+  );
+
+  const isOpenWebParam = immediateKeys.some((key) => urlParams.includes(key));
+  if (isOpenWebParam) {
+    const commentsWidget = document.getElementById("commentsWidget");
+    // smooth scroll to element and align it at the bottom
+    commentsWidget.scrollIntoView({ behavior: "smooth" });
+  }
+}
+```
+
 ---
 
 ## SSO Integration
