@@ -152,22 +152,23 @@ const CONVERSATION_FAILED = "spot-im-conversation-failed";
   Create a messageHandler:
 
   ```javascript
-  function incomingMessageHandler(msg, posId, value) {
-    if (msg !== "cmsg") {
-      return;
-    }
-
-    var parsedValue = JSON.parse(value);
+  function incomingMessageHandler(msg, posId) {
+    var parsedValue = JSON.parse(msg);
     var type = parsedValue.type;
-    var action = parsedValue.action;
-    var args = parsedValue.args;
-
     if (type && type === "spotim") {
-      if (
-        action &&
-        window.SPOTIM.safeframe.messageHandlers[action] instanceof Function
-      ) {
-        window.SPOTIM.safeframe.messageHandlers[action](args, posId);
+      var messages = parsedValue.messages;
+      if (Array.isArray(messages)) {
+        messages.forEach((msg) => {
+          var action = msg.action;
+          var args = msg.args;
+          if (
+            action &&
+            window.SPOTIM.safeframe.messageHandlers[action] instanceof
+              Function
+          ) {
+            window.SPOTIM.safeframe.messageHandlers[action](args, posId);
+          }
+        });
       }
     }
   }
