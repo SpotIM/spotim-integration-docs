@@ -370,17 +370,81 @@ That is, the publisher can listen for the `spotim_event` from type: `'spot-im-lo
 
 For more information [Click Here](https://github.com/SpotIM/spotim-integration-docs/tree/master/api/single-sign-on#integration-for-require-login-moderation-policy).
 
+---
+
+## Listen to errors
+
+Spot IM errors are bubbled up as a message to host under the action: `spotim_error`.
+
 ```javascript
 // Creating the event listener:
 
-function subscribeToSpotimEvents() {
+function subscribeToSpotimErrors() {
   window.SPOTIM.safeframe.subscribeToMessage({
-    action: "spotim_event",
+    action: "spotim_error",
     callback: function callback(args, posId) {
-      // handle Events: {type: 'event-type', params: {attached params}}
-      console.log("event-type:", args.type, "params:", args.params);
+      console.log(
+        "ERROR IN:",
+        "posId:",
+        posId,
+        "event-type:",
+        args.type,
+        "error:",
+        args.error
+      );
     },
   });
+}
+```
+
+---
+
+## Local Storage Integration
+
+Since Safeframe used to serve ads, it's served within a different domain from the publisher one.
+This causes a loss of `localStorage` data between sessions; Therefore, we need to store frame's storage as 1'st party data.
+
+1. Store the `localStorage` image on `storage_update` event.
+
+```javascript
+// Creating the event listener:
+
+function subscribeToStorageUpdates() {
+  window.SPOTIM.safeframe.subscribeToMessage({
+    action: "storage_update",
+    callback: function callback(args, posId) {
+      try {
+        localStorage.setItem("OW_STORAGE", JSON.stringify(args.storage));
+      } catch (err) {
+        console.log("storage_update - fail:", err);
+      }
+    },
+  });
+}
+```
+
+2. On position creation the publisher must pass the storage image to the frame.
+
+```javascript
+let openWebLocalStorage = undefined;
+
+try {
+  // Safeframe cannot parse a config with a value of 'null'
+  openWebLocalStorage = localStorage.getItem("OW_STORAGE") || undefined;
+} catch (err) {
+  console.error("openWebLocalStorage", err);
+}
+...
+
+window.JAC_CONFIG = {
+...
+    meta: {
+      OpenWeb: {
+        hostUrl: location.href,
+        localStorage: openWebLocalStorage,
+      },
+    },
+...
 }
 ```
 
