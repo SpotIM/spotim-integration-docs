@@ -229,6 +229,39 @@ const CONVERSATION_FAILED = "spot-im-conversation-failed";
   };
   ```
 
+- **Incoming clipboard copy messages (frame to host):**
+  Subscribe to clipboard copy:
+
+  ```javascript
+  function subscribeToClipboardWrite() {
+    window.SPOTIM.safeframe.subscribeToMessage({
+      action: "clipboard_write",
+      callback: function callback(args) {
+        clipboardCopy(args.text);
+      },
+    });
+  }
+
+  function clipboardCopy(text) {
+    var span = document.createElement("span");
+    span.textContent = text;
+    document.body.appendChild(span);
+
+    var selection = window.getSelection();
+    var range = window.document.createRange();
+    selection?.removeAllRanges();
+    range.selectNode(span);
+    selection?.addRange(range);
+
+    try {
+      window.document.execCommand("copy");
+    } catch (err) {}
+
+    selection?.removeAllRanges();
+    window.document.body.removeChild(span);
+  }
+  ```
+
 ### **SSO login flow:**
 
 ---
