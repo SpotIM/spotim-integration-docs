@@ -309,11 +309,13 @@ Actual implementation:
    ```
 
 2. On user login, start SSO login flow:
+   <br>Note: in some integrations the publisher has to pass a user id to the login method. `args: userId` is <b>optional</b>.
 
    ```javascript
-   function onLogin() {
+   function onLogin(userId) {
      window.SPOTIM.safeframe.sendMessageToFrame({
        action: "startSafeframeSso",
+       args: userId,
      });
    }
    ```
@@ -493,10 +495,11 @@ function uuid() {
   );
 }
 
-function onLogin() {
+function onLogin(userId) {
   if (window.SPOTIM.safeframe.isApiReady) {
     window.SPOTIM.safeframe.sendMessageToFrame({
       action: "startSafeframeSso",
+      args: userId,
     });
   } else {
     window.SPOTIM.safeframe.loginCalled = true;
