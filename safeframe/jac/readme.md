@@ -261,6 +261,19 @@ const CONVERSATION_FAILED = "spot-im-conversation-failed";
     window.document.body.removeChild(span);
   }
   ```
+  
+- **Navigate to url (frame to host):**
+
+    ```javascript
+      function subscribeToNavigate() {
+        window.SPOTIM.safeframe.subscribeToMessage({
+          action: "navigate",
+          callback: function callback(args) {
+            window.location.href = args.url;
+          },
+        });
+      }
+    ```
 
 ### **SSO login flow:**
 
@@ -672,6 +685,15 @@ function initSpotimMessageHandlers() {
     window.document.body.removeChild(span);
   }
 
+  function subscribeToNavigate() {
+    window.SPOTIM.safeframe.subscribeToMessage({
+      action: "navigate",
+      callback: function callback(args) {
+        window.location.href = args.url;
+      },
+    });
+  }
+
   window.SPOTIM.safeframe = {
     subscribeToMessage: subscribeToMessage,
     sendMessageToFrame: sendMessageToFrame,
@@ -686,6 +708,7 @@ function initSpotimMessageHandlers() {
   onLoginSuccess();
   onLoginError();
   subscribeToSpotimEvents();
+  subscribeToNavigate();
   subscribeToClipboardWrite();
 }
 
