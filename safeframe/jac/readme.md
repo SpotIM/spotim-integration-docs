@@ -261,19 +261,19 @@ const CONVERSATION_FAILED = "spot-im-conversation-failed";
     window.document.body.removeChild(span);
   }
   ```
-  
+
 - **Navigate to url (frame to host):**
 
-    ```javascript
-      function subscribeToNavigate() {
-        window.SPOTIM.safeframe.subscribeToMessage({
-          action: "navigate",
-          callback: function callback(args) {
-            window.location.href = args.url;
-          },
-        });
-      }
-    ```
+  ```javascript
+  function subscribeToNavigate() {
+    window.SPOTIM.safeframe.subscribeToMessage({
+      action: "navigate",
+      callback: function callback(args) {
+        window.location.href = args.url;
+      },
+    });
+  }
+  ```
 
 ### **SSO login flow:**
 
@@ -322,13 +322,13 @@ Actual implementation:
    ```
 
 2. On user login, start SSO login flow:
-   <br>Note: in some integrations the publisher has to pass a user id to the login method. `args: userId` is <b>optional</b>.
+   <br>Note: in some integrations the publisher has to pass a user id to the login method. `args: { userId }` is <b>optional</b>.
 
    ```javascript
    function onLogin(userId) {
      window.SPOTIM.safeframe.sendMessageToFrame({
        action: "startSafeframeSso",
-       args: userId,
+       args: { userId },
      });
    }
    ```
@@ -512,7 +512,7 @@ function onLogin(userId) {
   if (window.SPOTIM.safeframe.isApiReady) {
     window.SPOTIM.safeframe.sendMessageToFrame({
       action: "startSafeframeSso",
-      args: userId,
+      args: { userId },
     });
   } else {
     window.SPOTIM.safeframe.loginCalled = true;
