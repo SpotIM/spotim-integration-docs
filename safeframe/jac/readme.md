@@ -1,13 +1,15 @@
 # Safeframe's SSO integration docs
 
-Before start reading this integration doc, please make sure whether you are using the safeframe JAC's implementation or Yahoo's one.
+Before start reading this integration doc, please make sure whether you are using the safeframe JAC's implementation.
+
+FYI - When rendering OW products in a Safeframe most of the UX features should be integrate with the host.
+This integration code is long and exhaustive due to limitations of the Safeframe.
 
 ## Prerequisites
 
+- It is recommended to set the Safeframe as wide as possible and insert an inline style to Conversation's wrapper for setting it's desirable width.
+  That way, the Modals as User Profile can take up the whole screen if needed.
 - The publisher is using SSO login flow.
-
-- In order to keep consistency with the login details of the user, the publisher **MUST** host the `safeframe.html` file of the actual iframe.
-  A cross domain issue will end with a "logout" of the user in safari every time a session ends.
 
 - Safeframe configurations:
 
@@ -30,17 +32,23 @@ window.JAC_CONFIG = {
         targetElement: "commentsWidget",
         features: {
           safeFrame: {
-            enabled: true,
-            features: {
-              resize: {
-                enabled: true,
+              enabled: true,
+              features: {
+                resize: {
+                  enabled: true,
+                },
+                expandOver: {
+                  enabled: true,
+                },
               },
-            },
           },
         },
         content: {
-          // The value of the markup field should be the markup for the Spot.IM widget.
-          // Any references have to be remote, as the content will be loaded in a cross domain iframe.
+          /**
+          * - The value of the markup field should be the markup for the Spot.IM widget.
+          * - Any references have to be remote, as the content will be loaded in a cross domain iframe.
+          * - 'data-is-full-screen' set to "true" when in mobile, the conversation is loading inside a modal i.e. safeframe, takes the whole user's device screen.
+          */
           markup:
             `<style>
               #fc_align {
@@ -54,6 +62,8 @@ window.JAC_CONFIG = {
               data-post-id="POST_ID"
               data-safeframe-height=${widgetHeight}
               data-safeframe-width=${widgetWidth}
+              data-post-url="<article-url>"
+              data-is-full-screen="<boolean-as-string>"
             ></script>`
           size: {
             // Initial size of the widget, as defined by the publisher
@@ -62,9 +72,11 @@ window.JAC_CONFIG = {
           },
         },
         meta: {
-          // A meta data with the host url should be sent to the frame.
           OpenWeb: {
-            hostUrl: location.href
+            // A meta data with the host url should be sent to the frame.
+            hostUrl: location.href,
+            // The OW_STORAGE key, more details below
+            localStorage: openWebLocalStorage,
           },
         },
       },
@@ -229,36 +241,26 @@ const CONVERSATION_FAILED = "spot-im-conversation-failed";
   };
   ```
 
-- **Incoming clipboard copy messages (frame to host):**
-  Subscribe to clipboard copy:
+- **Scroll Lock integration:**
+  When modal dialogs are opened a scroll lock should occur for a better UX, one should integrate a scroll locking mechanism for it:
 
   ```javascript
-  function subscribeToClipboardWrite() {
+  function subscribeToScrollLock() {
     window.SPOTIM.safeframe.subscribeToMessage({
-      action: "clipboard_write",
+      action: "scroll-lock",
       callback: function callback(args) {
-        clipboardCopy(args.text);
+        // lock body scroll.
       },
     });
   }
 
-  function clipboardCopy(text) {
-    var span = document.createElement("span");
-    span.textContent = text;
-    document.body.appendChild(span);
-
-    var selection = window.getSelection();
-    var range = window.document.createRange();
-    selection?.removeAllRanges();
-    range.selectNode(span);
-    selection?.addRange(range);
-
-    try {
-      window.document.execCommand("copy");
-    } catch (err) {}
-
-    selection?.removeAllRanges();
-    window.document.body.removeChild(span);
+  function subscribeToScrollRelease() {
+    window.SPOTIM.safeframe.subscribeToMessage({
+      action: "scroll-release",
+      callback: function callback(args) {
+        // release body scroll.
+      },
+    });
   }
   ```
 
@@ -694,6 +696,26 @@ function initSpotimMessageHandlers() {
     });
   }
 
+  function subscribeToScrollLock() {
+    window.SPOTIM.safeframe.subscribeToMessage({
+      action: "scroll-lock",
+      callback: function callback(args) {
+        const commentsWidget = document.getElementById("commentsWidget");
+        bodyScrollLock.disableBodyScroll(commentsWidget);
+      },
+    });
+  }
+
+  function subscribeToScrollRelease() {
+    window.SPOTIM.safeframe.subscribeToMessage({
+      action: "scroll-release",
+      callback: function callback(args) {
+        const commentsWidget = document.getElementById("commentsWidget");
+        bodyScrollLock.enableBodyScroll(commentsWidget);
+      },
+    });
+  }
+
   window.SPOTIM.safeframe = {
     subscribeToMessage: subscribeToMessage,
     sendMessageToFrame: sendMessageToFrame,
@@ -709,7 +731,8 @@ function initSpotimMessageHandlers() {
   onLoginError();
   subscribeToSpotimEvents();
   subscribeToNavigate();
-  subscribeToClipboardWrite();
+  subscribeToScrollLock();
+  subscribeToScrollRelease();
 }
 
 initSpotimMessageHandlers();
