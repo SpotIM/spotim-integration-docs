@@ -205,7 +205,7 @@ Recirculation viewed
 Spot.IM has added Javascript listeners to the Spotlight Widget.
 
 ##### `spot-im-spotlight-CTA-click`
-The user has clicked on the Comment button
+The user has clicked on the Comment button. 
 `event.detail`:
 ```javascript
 {
