@@ -201,6 +201,19 @@ Recirculation loaded
 ##### `spot-im-recirculation-viewed`
 Recirculation viewed 
 
+## Spotlight
+Spot.IM has added Javascript listeners to the Spotlight Widget.
+
+##### `spot-im-spotlight-CTA-click`
+The user has clicked on the Comment button
+`event.detail`:
+```javascript
+{
+  type,
+  referrerUrl
+}
+```
+
 
 ## Recipes
 ### Get user emails upon login
