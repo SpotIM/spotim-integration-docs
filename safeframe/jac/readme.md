@@ -500,6 +500,36 @@ window.JAC_CONFIG = {
 
 ---
 
+## Messages Count Implementation
+
+1. Envoke `getMessagesCount` function. Pass an object that includes the publisher's Spot ID and the post ID of the Conversation.
+
+```javascript
+function getMessagesCount({ spotId, postId }) {
+  window.SPOTIM.safeframe.sendMessageToFrame({
+    action: "getMessagesCount",
+    args: { 
+      spotId, 
+      postId,
+    },
+  });
+}
+```
+
+2. Subscribe to `messages-count`, the result will be store in `args`.
+
+```javascript
+function subscribeToMessagesCount() {
+  window.SPOTIM.safeframe.subscribeToMessage({
+    action: "messages-count",
+    callback: function callback(args) {
+      console.log('Messages count is:', args);
+    },
+  });
+}
+```
+
+---
 ## Implementation proposal
 
 ```javascript
