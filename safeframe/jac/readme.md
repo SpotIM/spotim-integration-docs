@@ -516,7 +516,7 @@ function getMessagesCount({ spotId, postId }) {
 }
 ```
 
-2. Subscribe to `messages-count`, the result will be store in `args`.
+2. Subscribe to `messages-count`, the result will be stored in `args`.
 
 ```javascript
 function subscribeToMessagesCount() {
