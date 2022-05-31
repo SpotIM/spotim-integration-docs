@@ -550,7 +550,7 @@ The result in `args` will be an array with configured labels if any of type
     text: string;
 }
 ```
-Where `id` is an expected value to be used for `setSelectedCommentLabels` action and `text` is a 
+Where `id` is an expected value to be used for `setSelectedCommentLabels` action and `text` is 
 a descriptive name of the label.
 
 2. Invoke `getCommentLabels` action.
