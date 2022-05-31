@@ -515,7 +515,7 @@ function subscribeToMessagesCount() {
 }
 ```
 
-2. Envoke `getMessagesCount` function. Pass an object that includes the publisher's Spot ID and the post ID of the Conversation.
+2. Invoke `getMessagesCount` function. Pass an object that includes the publisher's Spot ID and the post ID of the Conversation.
 
 ```javascript
 function getMessagesCount({ spotId, postId }) {
@@ -529,6 +529,51 @@ function getMessagesCount({ spotId, postId }) {
 }
 ```
 ---
+
+## Preselect comment label API
+
+1. Subscribe to `comment-labels` action
+```javascript
+function subscribeToCommentLabels() {
+  window.SPOTIM.safeframe.subscribeToMessage({
+    action: "comment-labels",
+    callback: function callback(args) {
+      console.log('Labels', args);
+    },
+  });
+}
+```
+The result in `args` will be an array with configured labels if any of type
+```typescript
+{
+    id: string;
+    text: string;
+}
+```
+Where `id` is an expected value to be used for `setSelectedCommentLabels` action and `text` is a 
+a descriptive name of the label.
+
+2. Invoke `getCommentLabels` action.
+
+```javascript
+function getCommentLabels() {
+  window.SPOTIM.safeframe.sendMessageToFrame({
+    action: "getCommentLabels",
+  });
+}
+```
+
+3. Invoke `setSelectedCommentLabels` action, with an array of preselected label ids.
+```javascript
+function setSelectedCommentLabels(arrayOfIds) {
+  window.SPOTIM.safeframe.sendMessageToFrame({
+    action: "setSelectedCommentLabels",
+    args: arrayOfIds,
+  });
+}
+```
+---
+
 ## Implementation proposal
 
 ```javascript
