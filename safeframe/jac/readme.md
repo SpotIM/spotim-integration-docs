@@ -553,7 +553,8 @@ The result in `args` will be an array with configured labels if any of type
 Where `id` is an expected value to be used for `setSelectedCommentLabels` action and `text` is 
 a descriptive name of the label.
 
-2. Invoke `getCommentLabels` action.
+2. Invoke `getCommentLabels` action. Note: this step is mandatory for publisher to be able to obtain 
+label ids that would be later passed to `setSelectedCommentLabels`
 
 ```javascript
 function getCommentLabels() {
