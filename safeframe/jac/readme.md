@@ -569,7 +569,7 @@ function getCommentLabels() {
 function setSelectedCommentLabels(arrayOfIds) {
   window.SPOTIM.safeframe.sendMessageToFrame({
     action: "setSelectedCommentLabels",
-    args: arrayOfIds,
+    args: { labelIds: arrayOfIds },
   });
 }
 ```
